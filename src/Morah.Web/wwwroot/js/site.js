@@ -13,7 +13,7 @@ document.addEventListener('click', event => {
     }
 });
 document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') for (const menu of document.querySelectorAll('details[open]')) { menu.open = false; menu.querySelector('summary')?.focus(); }
+    if (event.key === 'Escape') for (const menu of document.querySelectorAll('.mobile-menu[open], .navigation-group[open], [data-search-field][open]')) { menu.open = false; menu.querySelector('summary')?.focus(); }
 });
 
 // Menus de busca: details e inputs nativos preservam SSR e navegação por teclado.
@@ -43,3 +43,4 @@ document.addEventListener('input', event => {
     const term = event.target.value.toLocaleLowerCase('pt-BR');
     for (const option of event.target.closest('[data-search-field]').querySelectorAll('.search-dropdown-option')) option.hidden = !option.textContent.toLocaleLowerCase('pt-BR').includes(term);
 });
+

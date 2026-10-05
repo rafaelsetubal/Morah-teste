@@ -1,0 +1,95 @@
+/* Variações demonstrativas autorizadas para identificar a troca de plantas. */
+.detail-plan-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; padding: 24px; text-align: center; }
+.detail-plan-placeholder strong { font-size: clamp(24px,3vw,40px); line-height: 1.2; }.detail-plan-placeholder > span { color: var(--semantic-color-text-secondary); font-size: 12px; }
+.detail-leisure-scroll { overflow-x: auto; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); overscroll-behavior-x: contain; }
+.detail-leisure-scroll .detail-leisure-grid { width: 750px; grid-template-columns: repeat(6,125px); grid-template-rows: repeat(2,125px); }
+.detail-gallery-expand { position: absolute; inset: 0; border: 0; padding: 0; width: 100%; height: 100%; background: transparent; }
+.detail-gallery-expand > img { width: 100%; height: 100%; object-fit: cover; }
+.detail-gallery-main::after { z-index: 0; }.detail-gallery-expand-label { position: absolute; right: 16px; bottom: 26px; display: flex; align-items: center; gap: 8px; background: white; border-radius: 999px; padding: 10px 14px; color: var(--primitive-color-coral-700); font-size: 12px; z-index: 1; }
+.detail-construction-media { padding: 0; min-height: 0; overflow: hidden; }
+.detail-work-open { display: flex; flex-direction: column; justify-content: space-between; align-items: start; gap: 16px; padding: 24px; min-height: 431px; width: 100%; border: 0; background: transparent; color: inherit; text-align: left; }
+.detail-construction-media--compact .detail-work-open { min-height: 189px; }
+.detail-work-label { display: flex; align-items: center; gap: 8px; border-radius: 999px; padding: 8px 12px; background: var(--primitive-color-coral-500); color: white; font-size: 10px; font-weight: 600; }.detail-work-label .morah-icon { font-size: 18px; flex: none; }
+.image-gallery-dialog { width: min(1100px,calc(100vw - 32px)); max-height: calc(100dvh - 32px); padding: 24px; border: 0; border-radius: 24px; background: var(--semantic-color-surface-default); color: var(--semantic-color-text-primary); overflow-y: auto; }
+.image-gallery-dialog::backdrop { background: rgba(38,38,35,.78); }.image-gallery-dialog > header { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 20px; }.image-gallery-dialog h2 { font-size: 20px; line-height: 1.3; }.image-gallery-dialog button { border: 0; background: var(--primitive-color-coral-50); color: var(--primitive-color-coral-700); border-radius: 999px; width: 44px; height: 44px; display: grid; place-items: center; flex: none; }
+.expanded-gallery-stage { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px; gap: 16px; align-items: center; }.expanded-gallery-stage figure { margin: 0; min-width: 0; }.expanded-gallery-stage img { width: 100%; height: min(55dvh,560px); object-fit: contain; border-radius: 16px; background: var(--semantic-color-background-subtle); }.expanded-gallery-stage figcaption { font-size: 12px; line-height: 1.5; text-align: center; color: var(--semantic-color-text-secondary); margin-top: 12px; }.expanded-gallery-count { text-align: center; font-size: 13px; margin: 16px; }
+.expanded-gallery-thumbnails { display: flex; gap: 8px; overflow-x: auto; padding: 4px; }.expanded-gallery-thumbnails button { width: 72px; height: 56px; border-radius: 8px; overflow: hidden; position: relative; }.expanded-gallery-thumbnails img { width: 100%; height: 100%; object-fit: cover; }.expanded-gallery-thumbnails span { position: absolute; bottom: 0; right: 0; padding: 2px 5px; color: white; background: rgba(38,38,35,.7); font-size: 10px; }.expanded-gallery-thumbnails [aria-pressed=true] { outline: 2px solid var(--primitive-color-coral-500); outline-offset: 2px; }
+.image-gallery-dialog button:focus-visible,.detail-work-open:focus-visible,.detail-gallery-expand:focus-visible { outline: 3px solid var(--primitive-color-orange-500); outline-offset: -3px; }
+.responsive-filter-panel { flex: 1; min-width: 0; }.responsive-filter-panel > summary { display: none; }.responsive-filter-panel > .filter-panel-content { display: flex; align-items: center; gap: 8px; }.catalog-filters .filter-panel-content { display: flex; flex-direction: column; align-items: stretch; gap: 22px; }.catalog-filter-groups { display: flex; flex-direction: column; gap: 22px; }.catalog-filters .catalog-apply { width: 100%; }.filter-label-closed { display: none; }
+@media(max-width:1100px) { .detail-work-open { min-height: 300px; }.detail-construction-media--compact .detail-work-open { min-height: 189px; } }
+@media(min-width:601px) and (max-width:900px) { .catalog-filters { display: flex; }.catalog-filter-groups { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; } }
+@media(max-width:600px) {
+    .detail-gallery-expand-label { right: 8px; bottom: 12px; font-size: 10px; padding: 7px; }.detail-gallery-expand-label .morah-icon { font-size: 16px; }
+    .image-gallery-dialog { padding: 16px; width: calc(100vw - 16px); max-height: calc(100dvh - 16px); }.image-gallery-dialog h2 { font-size: 16px; }.expanded-gallery-stage { grid-template-columns: 32px minmax(0,1fr) 32px; gap: 6px; }.expanded-gallery-stage > button { width: 32px; height: 32px; }.expanded-gallery-stage img { height: 40dvh; }
+    .property-search { display: block; }.property-search > h2 { margin-bottom: 16px; }.responsive-filter-panel > summary { display: flex; align-items: center; gap: 8px; padding: 10px 12px; border: 1px solid var(--primitive-color-coral-200); border-radius: 999px; font-size: 12px; font-weight: 600; background: white; color: var(--primitive-color-coral-700); min-height: 44px; }.responsive-filter-panel > summary .morah-icon { font-size: 20px; }.responsive-filter-panel > summary .morah-icon:last-child { margin-left: auto; }
+    .responsive-filter-panel:not([open]) .filter-label-open { display: none; }.responsive-filter-panel:not([open]) .filter-label-closed { display: inline; }.responsive-filter-panel[open] > summary { margin-bottom: 12px; }.responsive-filter-panel[open] > summary .morah-icon:last-child { transform: rotate(180deg); }.responsive-filter-panel:not([open]) > .filter-panel-content { display: none; }
+    .property-search .search-fields { display: flex; flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; min-width: 0; gap: 8px; padding-bottom: 6px; }.property-search .search-dropdown { flex: 0 0 180px; }.property-search .search-dropdown-panel { position: fixed; z-index: 90; left: var(--search-panel-left,16px); right: auto; top: var(--search-panel-top,150px); max-height: var(--search-panel-max-height,60dvh); overflow-y: auto; width: 230px; }.property-search .search-submit { margin: 0; flex: none; }.property-search--catalog .search-submit { padding: 4px; }.property-search--catalog .search-submit > span { display: none; }
+    .catalog-filters { display: flex; padding: 16px; }.catalog-filter-groups { display: flex; flex-direction: row; flex-wrap: nowrap; overflow-x: auto; gap: 16px; padding-bottom: 8px; }.catalog-filter-groups fieldset { flex: 0 0 174px; }.catalog-filters .filter-panel-content { gap: 16px; }
+    [data-drag-scroll] { scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); overscroll-behavior-x: contain; touch-action: pan-x pan-y; cursor: grab; user-select: none; }[data-drag-scroll].is-dragging { cursor: grabbing; }
+}
+
+/* Rolagem Morah: trilho suave e indicador coral. */
+.catalog-filters,.catalog-filter-groups,.search-fields { scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); }
+.catalog-filters::-webkit-scrollbar { width: 6px; }
+.catalog-filter-groups::-webkit-scrollbar,.search-fields::-webkit-scrollbar { height: 5px; }
+.catalog-filters::-webkit-scrollbar-track,.catalog-filter-groups::-webkit-scrollbar-track,.search-fields::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }
+.catalog-filters::-webkit-scrollbar-thumb,.catalog-filter-groups::-webkit-scrollbar-thumb,.search-fields::-webkit-scrollbar-thumb { background: var(--primitive-color-coral-300); border-radius: 999px; }
+@media(max-width:600px) { .property-search .search-dropdown:nth-child(n) .search-dropdown-panel { left: var(--search-panel-left,16px); right: auto; } }
+.banner-slides { touch-action: pan-y; cursor: grab; user-select: none; }.banner-slides img { -webkit-user-drag: none; }
+
+
+.catalog-layout > .catalog-filters { min-width: 0; }.catalog-filter-groups { min-width: 0; width: 100%; }
+@media(max-width:900px) { .catalog-layout { grid-template-columns: minmax(0,1fr); } }
+
+/* Busca sempre aberta; filtros móveis em coluna, conforme revisão do usuário. */
+.property-search-content { display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; }
+@media(max-width:600px) {
+ .property-search-content { flex-direction: column; align-items: stretch; gap: 12px; }
+ .property-search .search-fields { flex-direction: column; overflow: visible; width: 100%; padding-bottom: 0; }
+ .property-search .search-dropdown { flex: none; width: 100%; }
+ .property-search .search-submit { align-self: flex-end; }
+ .catalog-filter-groups { flex-direction: column; overflow: visible; padding-bottom: 0; }
+ .catalog-filter-groups fieldset { flex: none; width: 100%; }
+ .catalog-filter-groups[data-drag-scroll] { cursor: auto; user-select: auto; touch-action: auto; }
+}
+
+.search-dropdown:has(.search-dropdown-option input:checked) > summary { border-color: var(--primitive-color-coral-300); }
+.search-dropdown:has(.search-dropdown-option input:checked) [data-selection-summary] { color: var(--primitive-color-coral-700); font-weight: 600; }
+.catalog-filters label:has(input:checked) > span { color: var(--semantic-color-text-primary); font-weight: 600; }
+.property-status--avancadas { background: var(--primitive-color-orange-100); color: var(--primitive-color-orange-700); }
+
+.detail-interest-panel { position: sticky; top: var(--sticky-content-top); min-width: 0; z-index: 20; }
+.detail-interest-panel .detail-interest { position: static; }
+.mobile-interest-bar { display: none; }
+.mobile-interest-dialog { border: 0; border-radius: 24px; padding: 0; width: min(480px,calc(100vw - 24px)); max-height: calc(100dvh - 24px); overflow-y: auto; background: var(--primitive-color-coral-500); color: var(--semantic-color-text-primary); }
+.mobile-interest-dialog::backdrop { background: rgba(38,38,35,.65); }
+.interest-dialog-close { position: absolute; top: 12px; right: 12px; border: 0; border-radius: 999px; background: white; color: var(--primitive-color-coral-700); width: 40px; height: 40px; display: grid; place-items: center; z-index: 1; }
+@media(max-width:900px) { .detail-interest-panel { position: static; } }
+@media(max-width:600px) {
+ .property-detail { padding-bottom: 96px; }
+ .mobile-interest-bar { position: fixed; bottom: 0; left: 0; right: 0; z-index: 40; display: flex; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); background: white; border-top: 1px solid var(--primitive-color-coral-100); box-shadow: 0 -2px 12px rgba(38,38,35,.06); }
+ .mobile-interest-bar button { width: 100%; justify-content: center; gap: 12px; }
+ .mobile-interest-dialog .detail-interest { padding: 16px; max-height: none; overflow: visible; border: 0; box-shadow: none; }
+ .mobile-interest-dialog .detail-interest header { padding-top: 40px; }
+ .mobile-interest-dialog .interest-two-fields { grid-template-columns: 1fr; }
+}
+/* Faixa móvel coral, correspondente ao fundo do formulário de interesse. */
+@media(max-width:600px) {
+ .mobile-interest-bar { background: var(--primitive-color-coral-500); border-top: 0; padding: 16px 20px calc(16px + env(safe-area-inset-bottom)); border-radius: 20px 20px 0 0; box-shadow: 0 -4px 16px rgba(38,38,35,.12); }
+ .mobile-interest-bar .morah-button { background: white; color: var(--primitive-color-coral-700); border: 1px solid white; font-weight: 600; font-size: 16px; min-height: 52px; }
+ .mobile-interest-bar .morah-button:hover { background: var(--primitive-color-coral-50); color: var(--primitive-color-coral-700); }
+ .mobile-interest-bar .morah-button:focus-visible { outline: 3px solid var(--primitive-color-orange-500); outline-offset: 3px; }
+ .property-detail { padding-bottom: 112px; }
+}
+
+/* CTA móvel usa MorahButton real, incluindo seus estilos isolados e radius token. */
+@media(max-width:600px) {
+ .mobile-interest-bar { align-items: center; justify-content: space-between; gap: 12px; padding: 16px 16px calc(16px + env(safe-area-inset-bottom)); border-radius: 24px 24px 0 0; }
+ .mobile-interest-copy { flex: 1; min-width: 0; color: white; display: flex; flex-direction: column; gap: 4px; }
+ .mobile-interest-copy strong { font-size: 13px; line-height: 1.35; font-weight: 600; }
+ .mobile-interest-copy span { font-size: 10px; line-height: 1.4; }
+ .mobile-interest-action { flex: none; }
+ .mobile-interest-bar .mobile-interest-button { width: auto; min-height: 44px; padding: 0 14px; border-radius: var(--component-button-radius); font-size: 11px; gap: 6px; }
+ .mobile-interest-button .morah-button__icon { width: 16px; }
+ .mobile-interest-button .morah-icon { font-size: 18px; }
+}

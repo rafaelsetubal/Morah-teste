@@ -1,4 +1,4 @@
 <section id="lazer" class="detail-section" aria-label="Lazer completo">
     <PropertySectionHeading Eyebrow="LAZER COMPLETO" Title="Mais motivos para aproveitar cada dia" Description="Espaços para brincar, celebrar, relaxar e criar novas memórias sem sair de casa." />
-    <div class="detail-leisure-grid">@for(var i = 0; i < 6; i++) { <div><LeisureCard Coral="@(i % 2 != 0)" /><LeisureCard Coral="@(i % 2 == 0)" /></div> }</div>
+    <div class="detail-leisure-scroll" tabindex="0" aria-label="Itens de lazer, deslize para ver todos"><div class="detail-leisure-grid">@for(var i = 0; i < 12; i++) { <LeisureCard Coral="@((i / 6 + i % 6) % 2 != 0)" /> }</div></div>
 </section>

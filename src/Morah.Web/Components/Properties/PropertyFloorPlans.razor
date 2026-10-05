@@ -4,9 +4,12 @@
         <div class="detail-plan-tabs" role="tablist" aria-label="Tipologias">@for(var i = 0; i < Labels.Length; i++) { <button id="@($"plan-tab-{i}")" type="button" role="tab" aria-selected="@(i == 0 ? "true" : "false")" aria-controls="plan-panel" tabindex="@(i == 0 ? 0 : -1)" data-plan-index="@i">@Labels[i]</button> }</div>
         <div class="detail-plan-content" id="plan-panel" role="tabpanel" aria-labelledby="plan-tab-0">
             <div class="detail-plan-features"><p><MorahIcon Name="MorahIconName.Bed" />2 quartos</p><p><MorahIcon Name="MorahIconName.SquareFoot" /><span data-plan-area>43 a 50 m²</span></p><p><MorahIcon Name="MorahIconName.Elevator" />Elevador</p><p><MorahIcon Name="MorahIconName.Accessible" />Unidades acessíveis</p></div>
-            <div class="detail-plan-placeholder" role="img" aria-label="Espaço reservado para a imagem da planta, ainda não fornecida"></div>
+            <div class="detail-plan-placeholder" role="img" aria-label="Prévia demonstrativa: 2 quartos, 43 metros quadrados"><strong data-plan-preview-name>2 quartos • 43 m²</strong><span>Prévia demonstrativa</span></div>
         </div>
     </div>
+    <template data-plan-example="0"><p><MorahIcon Name="MorahIconName.Bed" />2 quartos</p><p><MorahIcon Name="MorahIconName.SquareFoot" />43 m²</p><p><MorahIcon Name="MorahIconName.Elevator" />Elevador</p><p><MorahIcon Name="MorahIconName.Accessible" />Unidades acessíveis</p></template>
+    <template data-plan-example="1"><p><MorahIcon Name="MorahIconName.Apartment" />2 quartos</p><p><MorahIcon Name="MorahIconName.SquareFoot" />47 m²</p><p><MorahIcon Name="MorahIconName.Home" />Apartamento</p><p><MorahIcon Name="MorahIconName.Elevator" />Elevador</p></template>
+    <template data-plan-example="2"><p><MorahIcon Name="MorahIconName.Accessible" />Unidades acessíveis</p><p><MorahIcon Name="MorahIconName.Bed" />2 quartos</p><p><MorahIcon Name="MorahIconName.Elevator" />Elevador</p><p><MorahIcon Name="MorahIconName.SquareFoot" />Planta PCD</p></template>
     <p class="detail-disclaimer">As imagens são ilustrativas. Móveis e decoração não fazem parte do contrato. Consulte o memorial descritivo.</p>
 </section>
 @code { private static readonly string[] Labels = ["2 quartos • 43 m²", "2 quartos • 47 m²", "2 quartos PCD"]; }

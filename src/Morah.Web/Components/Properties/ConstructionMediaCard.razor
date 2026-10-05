@@ -1,2 +1,11 @@
-<article class="detail-construction-media @(Compact ? "detail-construction-media--compact" : "")"><p><MorahIcon Name="MorahIconName.CalendarMonth" />@Label</p><div class="detail-construction-thumbnail"><img src="images/figma/detail-work-thumb.png" alt="Miniatura ilustrativa do registro da obra" loading="lazy" /><span aria-label="Mais dez imagens indicadas na referência">+10</span></div></article>
-@code { [Parameter] public string Label { get; set; } = ""; [Parameter] public bool Compact { get; set; } }
+<article class="detail-construction-media @(Compact ? "detail-construction-media--compact" : "")">
+    <button class="detail-work-open" type="button" data-open-work-gallery data-gallery-title="@Label" data-gallery-count="@GalleryCount" data-gallery-source="images/figma/detail-work-thumb.png" aria-label="@($"Abrir galeria: {Label}, {GalleryCount} fotos")">
+        <span class="detail-work-label"><MorahIcon Name="MorahIconName.CalendarMonth" />@Label</span>
+        <span class="detail-construction-thumbnail"><img src="images/figma/detail-work-thumb.png" alt="Miniatura ilustrativa do registro da obra" loading="lazy" /><span>+@GalleryCount</span></span>
+    </button>
+</article>
+@code {
+    [Parameter] public string Label { get; set; } = "";
+    [Parameter] public bool Compact { get; set; }
+    [Parameter] public int GalleryCount { get; set; } = 10;
+}

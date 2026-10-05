@@ -1,4 +1,7 @@
+@inject NavigationManager Navigation
 <nav class="detail-section-navigation" aria-label="Seções do empreendimento">
-    <a href="#visao-geral" aria-current="location">Visão geral</a><a href="#plantas">Plantas</a><a href="#lazer">Lazer</a><a href="#localizacao">Localização</a><a href="#evolucao">Evolução da obra</a>
+    <a href="@SectionLink("visao-geral")" aria-current="location">Visão geral</a><a href="@SectionLink("plantas")">Plantas</a><a href="@SectionLink("lazer")">Lazer</a><a href="@SectionLink("localizacao")">Localização</a><a href="@SectionLink("evolucao")">Evolução da obra</a>
     <span aria-disabled="true" title="Conteúdo ainda não preenchido no Figma">Ficha técnica</span><span aria-disabled="true" title="Conteúdo ainda não preenchido no Figma">Condições de compra</span><span aria-disabled="true" title="Conteúdo ainda não preenchido no Figma">Dúvidas</span>
 </nav>
+
+@code { private string SectionLink(string section) => new Uri(Navigation.Uri).AbsolutePath + "#" + section; }

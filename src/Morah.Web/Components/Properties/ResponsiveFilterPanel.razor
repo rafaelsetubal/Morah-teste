@@ -1,0 +1,5 @@
+<details class="responsive-filter-panel" data-responsive-filters open>
+    <summary><MorahIcon Name="MorahIconName.FilterList" /><span class="filter-label-closed">Ver filtros</span><span class="filter-label-open">Ocultar filtros</span><MorahIcon Name="MorahIconName.KeyboardArrowDown" /></summary>
+    <div class="filter-panel-content">@ChildContent</div>
+</details>
+@code { [Parameter] public RenderFragment? ChildContent { get; set; } }

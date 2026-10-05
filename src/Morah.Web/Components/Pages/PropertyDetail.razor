@@ -6,9 +6,10 @@
         <nav class="detail-breadcrumb" aria-label="Caminho da página"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/empreendimentos">Encontre seu Apê</a><span aria-hidden="true">›</span><span aria-current="page">Vista do Parque</span></nav>
         <div class="detail-layout">
             <div class="detail-main"><PropertyGallery /><PropertySectionNavigation /><PropertyOverview /><PropertyFloorPlans /><PropertyLeisure /><PropertyLocation /><ConstructionProgress /></div>
-            <PropertyInterestForm />
+            <PropertyInterestPanel />
         </div>
     </div>
+    <ImageGalleryDialog />
 } else {
     <PageTitle>Empreendimento não encontrado — Morah</PageTitle>
     <section class="detail-not-found site-container"><h1>Empreendimento não encontrado</h1><p>Explore os empreendimentos disponíveis para encontrar seu apê.</p><MorahButton Label="Ver empreendimentos" Href="/empreendimentos" /></section>
