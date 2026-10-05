@@ -1,0 +1,51 @@
+[
+  {
+    "font": "poppins",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf",
+    "file": "poppins-0.ttf",
+    "bytes": 154628
+  },
+  {
+    "font": "poppins",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf",
+    "file": "poppins-1.ttf",
+    "bytes": 151516
+  },
+  {
+    "font": "poppins",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf",
+    "file": "poppins-2.ttf",
+    "bytes": 150292
+  },
+  {
+    "font": "roboto",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWubEbWmT.ttf",
+    "file": "roboto-0.ttf",
+    "bytes": 123720
+  },
+  {
+    "font": "roboto",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYaammT.ttf",
+    "file": "roboto-1.ttf",
+    "bytes": 124288
+  },
+  {
+    "font": "roboto",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap",
+    "source": "https://fonts.gstatic.com/s/roboto/v51/KFOMCnqEu92Fr1ME7kSn66aGLdTylUAMQXC89YmC2DPNWuYjammT.ttf",
+    "file": "roboto-2.ttf",
+    "bytes": 124292
+  },
+  {
+    "font": "material-symbols-rounded",
+    "stylesheet": "https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&display=block",
+    "source": "https://fonts.gstatic.com/s/materialsymbolsrounded/v376/syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDB_Qb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rIelXxI.ttf",
+    "file": "material-symbols-rounded-0.ttf",
+    "bytes": 1216724
+  }
+]

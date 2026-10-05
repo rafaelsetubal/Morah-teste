@@ -1,0 +1,104 @@
+const assetPathPrefix = "https://www.figma.com/api/mcp/asset/a13c3a6a-e6ca-468a-87c7-b67e5a0e3faf";
+const imgLogoMorah = `${assetPathPrefix}/7a53d.svg`;
+
+export default function NavbarMorah() {
+  return (
+    <div className="bg-[var(--semantic\/color\/surface\/default,white)] border border-[var(--semantic\/color\/border\/default,#e5e5e3)] border-solid content-stretch flex items-center justify-between px-[16px] relative rounded-[999px] size-full" data-node-id="155:741" data-name="Navbar / Morah">
+      <div className="content-stretch flex h-[65px] items-center justify-center overflow-clip p-[16px] relative rounded-[var(--primitive\/spacing\/16,64px)] shrink-0 w-[142px]" data-node-id="I155:741;160:911" data-name="Brand capsule">
+        <div className="h-[42.155px] relative shrink-0 w-[140.516px]" data-node-id="I155:741;160:912" data-name="Logo / Morah">
+          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgLogoMorah} />
+        </div>
+      </div>
+      <div className="content-stretch flex gap-[4px] h-[48px] items-center overflow-clip relative shrink-0" data-node-id="I155:741;151:406" data-name="Navigation">
+        <div className="bg-[var(--semantic\/color\/background\/brand-soft,#fff1f0)] content-stretch flex h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:407" data-name="Nav item / Home">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="I155:741;151:408">
+            Home
+          </p>
+        </div>
+        <a className="bg-[var(--semantic\/color\/action\/ghost\/default,rgba(0,0,0,0))] content-stretch cursor-pointer flex h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:409" data-name="Nav item / Encontre seu apê">
+          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/primary,#262623)] text-left whitespace-nowrap" data-node-id="I155:741;151:410">
+            Encontre seu apê
+          </p>
+        </a>
+        <div className="[word-break:break-word] bg-[var(--semantic\/color\/action\/ghost\/default,rgba(0,0,0,0))] content-stretch flex font-normal gap-[6px] h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0 whitespace-nowrap" data-node-id="I155:741;151:412" data-name="Nav item / Conheça a Morah">
+          <p className="font-['Inter:Regular'] leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="I155:741;151:413">
+            Conheça a Morah
+          </p>
+          <p className="font-['Material_Symbols_Rounded:Regular'] leading-[24px] relative shrink-0 text-[18px] text-[color:var(--semantic\/color\/text\/secondary,#676765)]" data-node-id="I155:741;151:414" style={{ fontVariationSettings: '"FILL" 0, "GRAD" 0' }}>
+            keyboard_arrow_down
+          </p>
+        </div>
+        <div className="bg-[var(--semantic\/color\/action\/ghost\/default,rgba(0,0,0,0))] content-stretch flex h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:415" data-name="Nav item / Contato">
+          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="I155:741;151:416">
+            Contato
+          </p>
+        </div>
+        <div className="bg-[var(--semantic\/color\/action\/ghost\/default,rgba(0,0,0,0))] content-stretch flex h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:417" data-name="Nav item / Perguntas frequentes">
+          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="I155:741;151:418">
+            Perguntas frequentes
+          </p>
+        </div>
+        <div className="bg-[var(--semantic\/color\/action\/ghost\/default,rgba(0,0,0,0))] content-stretch flex h-[40px] items-center overflow-clip px-[14px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:419" data-name="Nav item / Blog">
+          <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[19px] not-italic relative shrink-0 text-[14px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="I155:741;151:420">
+            Blog
+          </p>
+        </div>
+      </div>
+      <div className="bg-[var(--component\/button\/outline\/bg\/default,rgba(255,255,255,0.12))] border-[1.5px] border-[var(--component\/button\/outline\/border\/default,#ff5541)] border-solid content-stretch flex gap-[8px] h-[48px] items-center justify-center px-[24px] relative rounded-[999px] shrink-0" data-node-id="I155:741;151:421" data-name="CTA / Fale com a Morah">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[20px] not-italic relative shrink-0 text-[15px] text-[color:var(--primitive\/color\/coral\/500-\(p\),#ff5541)] whitespace-nowrap" data-node-id="I155:741;151:421;30:131">
+          Fale com a Morah
+        </p>
+        <div className="content-stretch flex items-center justify-center relative shrink-0 size-[20px]" data-node-id="I155:741;151:421;36:115" data-name="Trailing icon">
+          <p className="[word-break:break-word] font-['Material_Symbols_Rounded:Regular'] font-normal leading-[24px] relative shrink-0 text-[24px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="I155:741;151:421;36:115;36:9" style={{ fontVariationSettings: '"FILL" 0, "GRAD" 0' }}>
+            arrow_forward
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Device=Navbar, Active=Morah, Property 3=Desktop, Property 4=Home
+**Node ID:** 151:403
+
+Floating Morah navbar. Built for RadzenMenu behavior with Morah styling.
+
+## Navbar / Morah
+**Node ID:** 151:510
+
+Floating rounded navigation. Variants: Device × Active.
+
+## Layout=Horizontal, Color=Brand
+**Node ID:** 30:9
+
+Morah logo horizontal — brand.
+
+## Logo / Morah
+**Node ID:** 30:27
+
+Official Morah logo lockups. Variants: Layout × Color.
+
+## Button / Morah
+**Node ID:** 30:160
+
+Morah button mapped to RadzenButton. Supports Label, leading/trailing Radzen icons, icon swap, type, size and state.
+
+## Name=arrow_forward
+**Node ID:** 36:8
+
+Radzen Icon="arrow\_forward" · Material Symbols Rounded.
+
+## Icon / Radzen
+**Node ID:** 36:28
+
+Icons aligned to Radzen Icon names and Material Symbols Rounded.
+Images and SVGs will be stored as constants, e.g. const image = `${assetPathPrefix}/<asset file name>`, where assetPathPrefix is declared once at the top of the code and every asset URL interpolates it. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

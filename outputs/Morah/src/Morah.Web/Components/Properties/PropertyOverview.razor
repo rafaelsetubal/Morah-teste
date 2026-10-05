@@ -1,0 +1,10 @@
+<section id="visao-geral" class="detail-overview" aria-labelledby="property-name">
+    <div class="detail-identity"><span class="detail-status">EM CONSTRUÇÃO</span><span>CAMPINAS — SP</span></div>
+    <h1 id="property-name">Vista do Parque</h1>
+    <div class="detail-address"><p>Av. das Palmeiras, 850 - Jardim Aurora</p><a href="#localizacao">Ver no mapa <MorahIcon Name="MorahIconName.Map" /></a></div>
+    <p class="detail-description">Seu primeiro apartamento em uma região completa, com lazer para toda a família e condições que tornam o sonho da casa própria mais próximo.</p>
+    <div class="detail-highlights">@foreach (var item in Highlights) { <div><MorahIcon Name="item.Icon" /><strong>@item.Label</strong></div> }</div>
+</section>
+@code {
+    private static readonly (MorahIconName Icon, string Label)[] Highlights = [(MorahIconName.Bed, "2 quartos"), (MorahIconName.SquareFoot, "43 a 50 m²"), (MorahIconName.Pool, "Lazer completo"), (MorahIconName.Shield, "Condomínio fechado")];
+}

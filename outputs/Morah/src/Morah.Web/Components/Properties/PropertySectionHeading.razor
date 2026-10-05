@@ -1,0 +1,6 @@
+<header class="detail-section-heading"><p class="overline">@Eyebrow</p><h2>@Title</h2>@if (!string.IsNullOrWhiteSpace(Description)) { <p>@Description</p> }</header>
+@code {
+    [Parameter] public string Eyebrow { get; set; } = "";
+    [Parameter] public string Title { get; set; } = "";
+    [Parameter] public string? Description { get; set; }
+}

@@ -1,0 +1,26 @@
+<details class="search-dropdown" data-search-field>
+    <summary class="search-field"><MorahIcon Name="@Icon" /><span><strong>@Label</strong><small data-selection-summary>@SelectionLabel</small></span><MorahIcon Name="MorahIconName.KeyboardArrowDown" /></summary>
+    <div class="search-dropdown-panel">
+        <p class="search-dropdown-title">@Prompt</p>
+        @if (Searchable) { <label class="search-option-query"><MorahIcon Name="MorahIconName.Search" /><input type="search" placeholder="@($"Buscar {Label.ToLowerInvariant()}")" aria-label="@($"Buscar opção de {Label.ToLowerInvariant()}")" data-option-query /></label> }
+        <div class="search-dropdown-options">
+            @foreach (var option in Options)
+            {
+                <label class="search-dropdown-option"><input type="@(Multiple ? "checkbox" : "radio")" name="@Name" value="@option.Value" checked="@Selected.Contains(option.Value)" /><span>@option.Label</span></label>
+            }
+        </div>
+        <div class="search-dropdown-actions"><button type="button" data-field-clear>Limpar</button><button type="button" data-field-apply>Aplicar</button></div>
+    </div>
+</details>
+@code {
+    [Parameter, EditorRequired] public string Name { get; set; } = "";
+    [Parameter, EditorRequired] public string Label { get; set; } = "";
+    [Parameter] public string Prompt { get; set; } = "";
+    [Parameter] public string Placeholder { get; set; } = "Qualquer";
+    [Parameter] public MorahIconName Icon { get; set; }
+    [Parameter] public bool Multiple { get; set; }
+    [Parameter] public bool Searchable { get; set; }
+    [Parameter] public SearchOption[] Options { get; set; } = [];
+    [Parameter] public string[] Selected { get; set; } = [];
+    private string SelectionLabel => string.Join(", ", Options.Where(x => Selected.Contains(x.Value)).Select(x => x.Label)) is { Length: > 0 } s ? s : Placeholder;
+}

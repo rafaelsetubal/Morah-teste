@@ -1,0 +1,10 @@
+<span class="morah-icon @CssClass" aria-hidden="@(Label is null ? "true" : null)"
+      role="@(Label is null ? null : "img")" aria-label="@Label">@Glyph</span>
+
+@code {
+    [Parameter, EditorRequired] public MorahIconName Name { get; set; }
+    [Parameter] public string? Label { get; set; }
+    [Parameter] public string? CssClass { get; set; }
+
+    private string Glyph => System.Text.RegularExpressions.Regex.Replace(Name.ToString(), "([a-z])([A-Z])", "$1_$2").ToLowerInvariant();
+}

@@ -1,0 +1,24 @@
+@page "/empreendimentos/{Slug}"
+@page "/programas-habitacionais"
+@page "/consultoria-financeira"
+@page "/consultoria-financeira/obrigado"
+@page "/conheca-a-morah"
+@page "/contato"
+@page "/perguntas-frequentes"
+@page "/blog"
+@page "/blog/{Slug}"
+@page "/privacidade"
+@page "/cookies"
+@page "/venda-seu-terreno"
+@page "/imprensa"
+
+@* Rotas reservadas. Nenhuma tela ou conteúdo de página implementado.
+   Noindex temporário impede indexação das rotas vazias antes da implementação. *@
+<HeadContent>
+    <meta name="robots" content="noindex, nofollow" />
+</HeadContent>
+
+@code {
+    [Parameter] public string? Slug { get; set; }
+}
+

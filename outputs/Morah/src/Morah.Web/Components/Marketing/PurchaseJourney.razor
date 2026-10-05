@@ -1,0 +1,19 @@
+<section class="journey site-container" aria-labelledby="journey-title">
+    <div class="journey-intro"><div><p class="overline">SEU PRÓXIMO PASSO</p><h2 class="section-title" id="journey-title">Do sonho às<br />chaves, <span class="text-orange">sem<br />complicação.</span></h2><p class="journey-description">A Morah acompanha você em todas as etapas para conquistar o seu apê com mais segurança, clareza e tranquilidade.</p></div><div class="journey-photo"><img src="images/figma/journey-couple.png" alt="Casal planejando seu novo lar" loading="lazy" /></div></div>
+    <div class="journey-steps">
+        <div class="journey-timeline" aria-hidden="true"><img src="images/figma/timeline.svg" alt="" /><b>1</b><b>2</b><b>3</b><b>4</b></div>
+        @for (var index = 0; index < Steps.Length; index++)
+        {
+            var step = Steps[index];
+            <article class="journey-step journey-step--@index"><p class="overline">@step.Label <span aria-hidden="true">—</span></p><h3>@step.Title</h3><p>@step.Description</p></article>
+        }
+    </div>
+</section>
+@code {
+    private static readonly (string Label, string Title, string Description)[] Steps = [
+        ("PRIMEIRO PASSO", "Simulação de crédito", "Entenda quanto você pode financiar e veja as melhores condições para o seu perfil."),
+        ("PRÓXIMA ETAPA", "Financiamento simplificado", "Conte com orientação para usar seu FGTS e acessar os programas habitacionais disponíveis."),
+        ("DOCUMENTAÇÃO", "Contrato sem complicação", "A Morah ajuda você a entender os documentos e cada etapa do processo."),
+        ("ENTREGA FINAL", "Entrega das chaves", "Mais que um imóvel: o início de uma nova história para você e sua família.")
+    ];
+}

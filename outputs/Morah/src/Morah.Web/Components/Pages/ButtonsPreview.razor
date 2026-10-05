@@ -1,0 +1,46 @@
+@page "/_preview/buttons"
+@inject Microsoft.Extensions.Hosting.IHostEnvironment Environment
+
+@if (Environment.IsDevelopment())
+{
+    <PageTitle>Botões Morah — validação</PageTitle>
+    <div class="button-preview">
+        <h1>Botões usados na HOME</h1>
+        <p>Referência visual da HOME. Poppins aplicada conforme decisão do projeto.</p>
+        <div class="button-preview__row">
+            <MorahButton Label="Fale com a Morah" Variant="MorahButtonVariant.Outline" Href="/contato" TrailingIcon="MorahIconName.ArrowForward" />
+            <MorahButton Label="Fale com a Morah" Size="MorahButtonSize.LG" Href="/contato" TrailingIcon="MorahIconName.ArrowForward" />
+            <MorahButton Label="Ver todos os artigos" Variant="MorahButtonVariant.Outline" Href="/blog" TrailingIcon="MorahIconName.ArrowForward" />
+        </div>
+        <div class="button-preview__row">
+            <MorahIconButton Icon="MorahIconName.ArrowForward" Size="MorahButtonSize.SM" AriaLabel="Ver detalhes" Href="/encontre-seu-ape" />
+            <MorahIconButton Icon="MorahIconName.ChevronLeft" Size="MorahButtonSize.SM" Variant="MorahButtonVariant.Secondary" AriaLabel="Anterior" />
+            <MorahIconButton Icon="MorahIconName.ChevronRight" Variant="MorahButtonVariant.Outline" AriaLabel="Próximo" />
+            <MorahButton Label="Indisponível" Disabled="true" />
+            <MorahButton Label="Indisponível" Href="/contato" Disabled="true" />
+        </div>
+        <h2>Tamanhos e variantes complementares</h2>
+        @foreach (var size in Enum.GetValues<MorahButtonSize>())
+        {
+            <div class="button-preview__row">
+                @foreach (var variant in Enum.GetValues<MorahButtonVariant>())
+                {
+                    <MorahButton Label="@($"{variant} {size}")" Size="size" Variant="variant" />
+                }
+            </div>
+        }
+    </div>
+}
+else
+{
+    <PageTitle>Não encontrado</PageTitle>
+}
+
+@code {
+    [CascadingParameter] public HttpContext? HttpContext { get; set; }
+    protected override void OnInitialized()
+    {
+        if (!Environment.IsDevelopment() && HttpContext is { } context)
+            context.Response.StatusCode = 404;
+    }
+}

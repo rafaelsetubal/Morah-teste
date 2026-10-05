@@ -1,0 +1,80 @@
+[
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutHorizontalColorBrand",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/86374.svg",
+    "path": "logos/morah-horizontal-brand.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutHorizontalColorBlack",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/e0da2.svg",
+    "path": "logos/morah-horizontal-black.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutHorizontalColorWhite",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/aabc3.svg",
+    "path": "logos/morah-horizontal-white.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutVerticalColorBrand",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/d6a36.svg",
+    "path": "logos/morah-vertical-brand.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutVerticalColorBlack",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/b92ef.svg",
+    "path": "logos/morah-vertical-black.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutVerticalColorWhite",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/435f8.svg",
+    "path": "logos/morah-vertical-white.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutIconColorBrand",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/3c6d7.svg",
+    "path": "logos/morah-icon-brand.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutIconColorBlack",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/90ef4.svg",
+    "path": "logos/morah-icon-black.svg"
+  },
+  {
+    "sourceNode": "30:27",
+    "name": "imgLayoutIconColorWhite",
+    "url": "https://www.figma.com/api/mcp/asset/891d4878-138d-4318-a894-cfc3cb7369f5/6594c.svg",
+    "path": "logos/morah-icon-white.svg"
+  },
+  {
+    "sourceNode": "346:5872",
+    "name": "imgInstagram",
+    "url": "https://www.figma.com/api/mcp/asset/6ae04743-2201-4f63-88ab-f46df25590ef/8451d.svg",
+    "path": "social/instagram.svg"
+  },
+  {
+    "sourceNode": "346:5872",
+    "name": "imgFacebook",
+    "url": "https://www.figma.com/api/mcp/asset/6ae04743-2201-4f63-88ab-f46df25590ef/c03e9.svg",
+    "path": "social/facebook.svg"
+  },
+  {
+    "sourceNode": "346:5872",
+    "name": "imgYoutube",
+    "url": "https://www.figma.com/api/mcp/asset/6ae04743-2201-4f63-88ab-f46df25590ef/81a7a.svg",
+    "path": "social/youtube.svg"
+  },
+  {
+    "sourceNode": "346:5872",
+    "name": "imgLinkedin",
+    "url": "https://www.figma.com/api/mcp/asset/6ae04743-2201-4f63-88ab-f46df25590ef/9a59e.svg",
+    "path": "social/linkedin.svg"
+  }
+]

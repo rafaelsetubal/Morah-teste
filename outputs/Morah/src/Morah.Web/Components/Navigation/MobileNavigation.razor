@@ -1,0 +1,10 @@
+<div class="mobile-navigation">
+    <MorahIconButton Icon="MorahIconName.Chat" Variant="MorahButtonVariant.Ghost" AriaLabel="Fale com a Morah" Href="/contato" />
+    <details class="mobile-menu">
+        <summary aria-label="Abrir navegação" aria-expanded="false"><MorahIcon Name="MorahIconName.Menu" /></summary>
+        <nav aria-label="Navegação mobile">
+            @foreach (var item in SiteNavigation.Main) { <NavigationItem Item="item" /> }
+            <a href="/design-system">Design system</a>
+        </nav>
+    </details>
+</div>

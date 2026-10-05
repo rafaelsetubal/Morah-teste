@@ -1,0 +1,11 @@
+<section class="morah-section @Class" aria-labelledby="@LabelledBy" aria-label="@Label">
+    @ChildContent
+</section>
+
+@code {
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public string? Class { get; set; }
+    [Parameter] public string? LabelledBy { get; set; }
+    [Parameter] public string? Label { get; set; }
+}
+

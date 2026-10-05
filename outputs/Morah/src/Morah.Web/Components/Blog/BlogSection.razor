@@ -1,0 +1,16 @@
+<section class="blog-section site-container" aria-labelledby="blog-title">
+    <div class="blog-heading"><div><p class="overline">CONTEÚDO QUE AJUDA</p><h2 id="blog-title">Dicas e informações para o seu <span class="text-orange">novo começo.</span></h2><p>Conteúdo simples e útil para tomar decisões com mais segurança, do planejamento às chaves.</p></div><MorahButton Label="Ver todos os artigos" Variant="MorahButtonVariant.Outline" Href="/blog" TrailingIcon="MorahIconName.ArrowForward" /></div>
+    <div class="blog-grid">
+        <article class="blog-featured"><img src="images/figma/blog-leisure.jpeg" alt="Vista aérea das áreas de lazer de um condomínio" loading="lazy" /><div class="blog-featured-copy"><span class="blog-category">QUALIDADE DE VIDA</span><p class="read-time">6 min de leitura</p><h3>Áreas de lazer em condomínio: como esse diferencial valoriza seu imóvel e melhora sua qualidade de vida</h3><p>Conheça os principais benefícios que áreas de lazer em condomínio proporcionam às famílias com a BRZ!</p><ArticleLink Href="/blog/areas-de-lazer" /></div></article>
+        @foreach (var article in Articles)
+        {
+            <article class="blog-card"><img src="@($"images/figma/{article.Image}")" alt="@article.Alt" loading="lazy" /><div class="blog-card-copy"><div class="blog-meta"><span class="blog-category">@article.Category</span><span>5 min</span></div><h3>@article.Title</h3><p>@article.Description</p><ArticleLink Href="@article.Href" /></div></article>
+        }
+    </div>
+</section>
+@code {
+    private static readonly (string Image, string Alt, string Category, string Title, string Description, string Href)[] Articles = [
+        ("blog-program.png", "Chaves com identificação Minha Casa Minha Vida", "PROGRAMAS HABITACIONAIS", "Minha Casa Minha Vida: como funciona em 2026", "Faixas de renda, subsídios e caminhos para financiar.", "/blog/minha-casa-minha-vida"),
+        ("blog-decoration.png", "Ideias de decoração e composição para a casa", "DECORAÇÃO", "14 Ideias de decoração com páletes para a sua casa", "Inspire-se com ideias criativas para usar os páletes na sua casa.", "/blog/decoracao-com-paletes")
+    ];
+}

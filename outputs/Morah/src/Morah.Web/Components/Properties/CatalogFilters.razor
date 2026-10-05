@@ -1,0 +1,17 @@
+<form class="catalog-filters" action="/empreendimentos#resultados" method="get" aria-label="Filtros dos empreendimentos">
+    <div class="catalog-filter-heading"><h2><MorahIcon Name="MorahIconName.FilterList" />Filtros</h2><a href="/empreendimentos">Limpar filtros</a></div>
+    <fieldset><legend>Status da obra</legend>@foreach (var option in StatusOptions) { <label><input type="checkbox" name="status" value="@option.Value" checked="@Statuses.Contains(option.Value)" /><span>@option.Label</span><small>@CatalogProperties.Items.Count(x => x.StatusKey == option.Value)</small></label> }</fieldset>
+    <fieldset disabled title="Preços não informados nos cards demonstrativos"><legend>Faixa de preço</legend><div class="catalog-range" aria-hidden="true"><i></i><i></i></div><small>R$ 150 mil — R$ 500 mil</small></fieldset>
+    <fieldset><legend>Quartos</legend>@foreach (var room in new[] { "1", "2", "3", "4" }) { <label><input type="checkbox" name="quartos" value="@room" checked="@Rooms.Contains(room)" /><span>@(room == "4" ? "4+ quartos" : room == "1" ? "1 quarto" : $"{room} quartos")</span><small>@CatalogProperties.Items.Count(x => x.Rooms.Contains(room))</small></label> }</fieldset>
+    <fieldset disabled title="Faixa de área ilustrativa do Figma"><legend>Área</legend><div class="catalog-range" aria-hidden="true"><i></i><i></i></div><small>30 m² — 100 m²</small></fieldset>
+    <fieldset><legend>Tipo de imóvel</legend><label><input type="checkbox" name="tipo" value="apartamento" checked="@Types.Contains("apartamento")" /><span>Apartamento</span><small>6</small></label><label><input type="checkbox" name="tipo" value="casa" checked="@Types.Contains("casa")" /><span>Casa</span><small>0</small></label></fieldset>
+    <fieldset><legend>Lazer e diferenciais</legend>@foreach (var label in new[] { "Piscina", "Academia", "Playground", "Salão de festas", "Churrasqueira" }) { <label title="Não informado nos cards demonstrativos"><input type="checkbox" disabled /><span>@label</span></label> }<label><input type="checkbox" name="pet" value="sim" checked="@Pet" /><span>Espaço pet</span><small>3</small></label></fieldset>
+    <button class="catalog-apply" type="submit">Aplicar filtros</button>
+</form>
+@code {
+    [Parameter] public string[] Statuses { get; set; } = [];
+    [Parameter] public string[] Rooms { get; set; } = [];
+    [Parameter] public string[] Types { get; set; } = [];
+    [Parameter] public bool Pet { get; set; }
+    private static readonly SearchOption[] StatusOptions = [new("lancamento", "Lançamento"), new("construcao", "Em construção"), new("avancadas", "Obras avançadas"), new("pronto", "Pronto para morar")];
+}

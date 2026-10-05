@@ -1,0 +1,5 @@
+.morah-container {
+    width: min(calc(100% - 2 * var(--responsive-margin)), var(--responsive-content-max));
+    margin-inline: auto;
+}
+

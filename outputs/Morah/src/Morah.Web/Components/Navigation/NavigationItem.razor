@@ -1,0 +1,6 @@
+@inject NavigationManager Navigation
+<a href="@Item.Href" class="navigation-item @(Active ? "is-active" : "")" aria-current="@(Active ? "page" : null)">@Item.Label</a>
+@code {
+    [Parameter, EditorRequired] public NavigationLink Item { get; set; } = default!;
+    private bool Active => new Uri(Navigation.Uri).AbsolutePath.TrimEnd('/') == Item.Href.TrimEnd('/');
+}

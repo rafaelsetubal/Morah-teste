@@ -1,0 +1,16 @@
+<nav class="desktop-navigation" aria-label="Navegação principal">
+    @foreach (var item in SiteNavigation.Main)
+    {
+        if (item.Href == "/conheca-a-morah")
+        {
+            <details class="navigation-group">
+                <summary>@item.Label <MorahIcon Name="MorahIconName.KeyboardArrowDown" /></summary>
+                <div class="navigation-submenu">
+                    <NavigationItem Item="item" />
+                    <a href="/conheca-a-morah#manifesto">Manifesto e propósito</a>
+                </div>
+            </details>
+        }
+        else { <NavigationItem Item="item" /> }
+    }
+</nav>

@@ -1,0 +1,25 @@
+<footer class="site-container site-footer">
+    <div class="footer-brand">
+        <div class="footer-signature"><BrandLogo Href="/" CssClass="footer-logo" /><p>Mais que um apê. Um novo começo.</p></div>
+        <div class="socials"><span>SIGA A MORAH</span>@foreach (var social in Socials) { <span class="social" title="@social"><img src="@($"images/figma/{social}.svg")" alt="@social" /></span> }</div>
+    </div>
+    <hr />
+    <div class="footer-columns">
+        @foreach (var column in Columns)
+        {
+            <div><h2>@column.Title</h2><nav aria-label="@column.Title">@foreach (var link in column.Links) { <a href="@link.Href">@link.Label</a> }</nav></div>
+        }
+        <div><h2>Contato</h2><p class="phone">0800 000 0000</p><a href="mailto:relacionamento@morah.com.br">relacionamento@morah.com.br</a><p class="hours">Segunda a sexta, das 8h às 18h. Sábados, das 9h às 13h.</p></div>
+    </div>
+    <hr />
+    <div class="footer-legal"><p>© 2026 Morah. Todos os direitos reservados.</p><nav aria-label="Informações legais"><a href="/privacidade">Privacidade</a><a href="/cookies">Cookies</a><a href="/privacidade#dpo">LGPD / DPO</a></nav></div>
+</footer>
+@code {
+    private static readonly string[] Socials = ["instagram", "facebook", "youtube", "linkedin"];
+    private static readonly (string Title, NavigationLink[] Links)[] Columns = [
+        ("Encontre seu apê", [new("Todos os empreendimentos", "/empreendimentos"),new("Lançamentos", "/empreendimentos?status=lancamento"),new("Em construção", "/empreendimentos?status=construcao"),new("Prontos para morar", "/empreendimentos?status=pronto")]),
+        ("Conheça a Morah", [new("Sobre a Morah", "/conheca-a-morah"),new("Por que escolher a Morah", "/#por-que-morah"),new("Trabalhe com a gente", "/contato"),new("Notícias", "/imprensa")]),
+        ("Ajuda e conteúdo", [new("Blog Morah", "/blog"),new("Perguntas frequentes", "/perguntas-frequentes"),new("Orientação Financeira", "/consultoria-financeira"),new("Programas habitacionais", "/programas-habitacionais")])
+    ];
+}
+

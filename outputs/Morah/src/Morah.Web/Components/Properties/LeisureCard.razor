@@ -1,0 +1,5 @@
+<div class="detail-leisure-card @(Coral ? "detail-leisure-card--coral" : "")"><img src="images/figma/detail-leisure.svg" alt="" /><p>@Label</p></div>
+@code {
+    [Parameter] public string Label { get; set; } = "Label em até 2 linhas";
+    [Parameter] public bool Coral { get; set; }
+}

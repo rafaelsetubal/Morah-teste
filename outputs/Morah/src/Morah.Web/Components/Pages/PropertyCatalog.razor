@@ -1,0 +1,34 @@
+@page "/empreendimentos"
+<PageTitle>Encontre seu apê — Morah</PageTitle>
+<HeadContent><meta name="description" content="Explore os empreendimentos Morah e encontre seu apê ideal." /></HeadContent>
+<CatalogIntro />
+<PropertySearch Action="/empreendimentos#resultados" ShowHeading="false" Statuses="SelectedStatus" RoomSelections="SelectedRooms" />
+<section class="catalog site-container" id="resultados" aria-labelledby="results-title">
+    <div class="catalog-results-heading"><div><p class="overline">EMPREENDIMENTOS MORAH</p><h2 id="results-title"><span>@Filtered.Length</span> empreendimentos encontrados</h2></div><p>Portfólio atualizado em outubro de 2026</p></div>
+    <div class="catalog-layout">
+        <CatalogFilters Statuses="SelectedStatus" Rooms="SelectedRooms" Types="SelectedTypes" Pet="@(Pet == "sim")" />
+        <div class="catalog-results">
+            <div class="catalog-toolbar"><span>@(Filtered.Length > 0 ? $"Exibindo 1–{Filtered.Length} de {Filtered.Length}" : "Nenhum resultado")</span><form action="/empreendimentos#resultados" method="get">@foreach(var s in SelectedStatus){<input type="hidden" name="status" value="@s" />}@foreach(var r in SelectedRooms){<input type="hidden" name="quartos" value="@r" />}@foreach(var t in SelectedTypes){<input type="hidden" name="tipo" value="@t" />}@if(Pet == "sim"){<input type="hidden" name="pet" value="sim" />}<label>Ordenar por <select name="ordem" aria-label="Ordenar empreendimentos"><option value="relevancia" selected="@(Order != "fase")">Mais relevantes</option><option value="fase" selected="@(Order == "fase")">Fase da obra</option></select></label><button type="submit" class="catalog-sort">Ordenar</button></form></div>
+            <div class="catalog-grid">@foreach (var item in Filtered) { <PropertyCard Item="item" /> }</div>
+            @if (Filtered.Length == 0) { <div class="catalog-empty"><h3>Nenhum empreendimento encontrado.</h3><p>Experimente outros filtros para encontrar seu apê.</p><a href="/empreendimentos">Limpar filtros</a></div> }
+            <nav class="catalog-pagination" aria-label="Páginas de empreendimentos"><button disabled aria-label="Página anterior"><MorahIcon Name="MorahIconName.ChevronLeft" /></button><span aria-current="page">1</span><button disabled aria-label="Próxima página"><MorahIcon Name="MorahIconName.ChevronRight" /></button></nav>
+        </div>
+        <FinancingHelpCard />
+    </div>
+</section>
+@code {
+    [SupplyParameterFromQuery(Name = "status")] public string[]? Statuses { get; set; }
+    [SupplyParameterFromQuery(Name = "quartos")] public string[]? Rooms { get; set; }
+    [SupplyParameterFromQuery(Name = "tipo")] public string[]? Types { get; set; }
+    [SupplyParameterFromQuery(Name = "pet")] public string? Pet { get; set; }
+    [SupplyParameterFromQuery(Name = "ordem")] public string? Order { get; set; }
+    private string[] SelectedStatus => Statuses ?? [];
+    private string[] SelectedRooms => Rooms ?? [];
+    private string[] SelectedTypes => Types ?? [];
+    private PropertyPreview[] Filtered {
+        get {
+            var items = CatalogProperties.Items.Where(x => (SelectedStatus.Length == 0 || SelectedStatus.Contains(x.StatusKey)) && (SelectedRooms.Length == 0 || SelectedRooms.Any(r => x.Rooms.Contains(r))) && (SelectedTypes.Length == 0 || SelectedTypes.Contains("apartamento")) && (Pet != "sim" || x.Editorial));
+            return (Order == "fase" ? items.OrderBy(x => x.StatusKey) : items).ToArray();
+        }
+    }
+}

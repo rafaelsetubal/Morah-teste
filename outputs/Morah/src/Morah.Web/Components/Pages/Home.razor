@@ -1,0 +1,25 @@
+@page "/"
+<PageTitle>Morah — Mais que um apê. Um novo começo.</PageTitle>
+<HeadContent><meta name="description" content="Conheça os empreendimentos da Morah e encontre seu apê ideal. Do sonho às chaves, com orientação em todas as etapas." /></HeadContent>
+<HeroBanner />
+<PropertySearch Statuses="SelectedStatus" RoomSelections="SelectedRooms" />
+<section class="featured-properties site-container" id="destaques" aria-labelledby="featured-title">
+    <div class="featured-heading"><div><p class="overline">NOSSOS DESTAQUES</p><h2 class="section-title" id="featured-title">Conheça<br /><span class="text-gradient">nossos empreendimentos</span></h2></div><div class="featured-controls"><a href="/empreendimentos">Ver todos os empreendimentos</a><button class="round-outline" type="button" aria-label="Empreendimentos anteriores" data-scroll="properties-track" data-direction="-1"><MorahIcon Name="MorahIconName.ChevronLeft" /></button><button class="round-outline" type="button" aria-label="Próximos empreendimentos" data-scroll="properties-track" data-direction="1"><MorahIcon Name="MorahIconName.ChevronRight" /></button></div></div>
+    <div class="properties-track" id="properties-track" tabindex="0" aria-label="Empreendimentos em destaque">
+        @foreach (var item in FilteredProperties) { <PropertyCard Item="item" /> }
+        @if (!FilteredProperties.Any()) { <p>Nenhum empreendimento para os filtros selecionados.</p> }
+    </div>
+</section>
+<BenefitsSection />
+<PurchaseJourney />
+<SupportCards />
+<BlogSection />
+<ContactInvitation />
+@code {
+    [SupplyParameterFromQuery(Name = "status")] public string[]? Status { get; set; }
+    [SupplyParameterFromQuery(Name = "quartos")] public string[]? Rooms { get; set; }
+    private string[] SelectedStatus => Status ?? [];
+    private string[] SelectedRooms => Rooms ?? [];
+    private IEnumerable<PropertyPreview> FilteredProperties => HomeProperties.Items.Where(x => (SelectedStatus.Length == 0 || SelectedStatus.Contains(x.StatusKey)) && (SelectedRooms.Length == 0 || SelectedRooms.Any(r => x.Rooms.Contains(r, StringComparison.Ordinal))));
+}
+

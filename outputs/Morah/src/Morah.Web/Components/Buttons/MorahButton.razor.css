@@ -1,0 +1,50 @@
+/* HOME: 326:2784, I155:741;151:421, 377:1841 e I251:1320;251:1281. */
+.morah-button {
+    --button-height: var(--component-button-height-md);
+    --button-padding: 24px;
+    --button-icon-slot: 20px;
+    --button-gradient-angle: 135.944316deg;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: var(--button-height);
+    padding: 0 var(--button-padding);
+    border: 0;
+    border-radius: var(--component-button-radius);
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+}
+.morah-button--sm { --button-height: var(--component-button-height-sm); --button-padding: 16px; --button-icon-slot: 16px; }
+.morah-button--lg { --button-height: var(--component-button-height-lg); --button-padding: 28px; --button-icon-slot: 24px; }
+.morah-button__icon { display: inline-flex; align-items: center; justify-content: center; width: var(--button-icon-slot); height: var(--button-icon-slot); flex: none; }
+.morah-button--primary {
+    color: var(--component-button-primary-text);
+    background: linear-gradient(var(--button-gradient-angle), var(--primitive-color-coral-500) 0%, var(--primitive-color-orange-500) 81.65%);
+}
+.morah-button--secondary {
+    color: var(--semantic-color-text-inverse);
+    background: linear-gradient(105deg, var(--primitive-color-orange-500) 0%, var(--primitive-color-coral-500) 81.65%);
+}
+.morah-button--outline { background: var(--component-button-outline-bg-default); border: 1.5px solid var(--component-button-outline-border-default); color: var(--component-button-outline-text); }
+.morah-button--ghost { background: var(--component-button-ghost-bg-default); color: var(--component-button-ghost-text); }
+.morah-button--icon { width: var(--button-height); height: var(--button-height); padding: 0; flex: none; }
+/* As instâncias circulares da HOME usam fills sólidos, distintos do CTA textual. */
+.morah-button--icon.morah-button--primary { background: var(--primitive-color-coral-500); }
+.morah-button--icon.morah-button--secondary { background: var(--primitive-color-pink-50); color: var(--primitive-color-coral-500); }
+@media (hover: hover) {
+    .morah-button--primary:hover:not(:disabled), .morah-button--secondary:hover:not(:disabled) { box-shadow: var(--primitive-shadow-sm); }
+    .morah-button--outline:hover:not(:disabled) { background: var(--component-button-outline-bg-hover); }
+    .morah-button--ghost:hover:not(:disabled) { background: var(--component-button-ghost-bg-hover); }
+}
+.morah-button:focus-visible { outline: 3px solid var(--semantic-color-border-focus); outline-offset: 3px; }
+.morah-button:disabled { background: var(--component-button-disabled-bg); color: var(--component-button-disabled-text); border-color: transparent; cursor: not-allowed; box-shadow: none; }
+/* SM permanece 40px visualmente; o alvo de interação mede pelo menos 44px. */
+.morah-button--sm::before { content: ''; position: absolute; inset: -2px 0; border-radius: inherit; }
+.morah-button--sm.morah-button--icon::before { inset: -2px; }

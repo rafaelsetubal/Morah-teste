@@ -1,0 +1,13 @@
+html { color-scheme: light; }
+body {
+    margin: 0;
+    color: var(--semantic-color-text-primary);
+    background: var(--semantic-color-background-page);
+    font-family: var(--font-body);
+}
+*, *::before, *::after { box-sizing: border-box; }
+:focus-visible {
+    outline: var(--primitive-focus-ring-width) solid var(--semantic-color-border-focus);
+    outline-offset: var(--primitive-focus-ring-offset);
+}
+

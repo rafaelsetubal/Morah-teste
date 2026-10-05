@@ -1,0 +1,2 @@
+.button-preview { padding: 24px; font-family: var(--font-heading); }
+.button-preview__row { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-block: 24px; }

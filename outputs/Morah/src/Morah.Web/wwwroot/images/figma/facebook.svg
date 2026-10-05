@@ -1,0 +1,22 @@
+<svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="18" height="18" fill="#F5F5F5"/>
+<g id="Home">
+<rect width="1440" height="5453" transform="translate(-1151 -5050)" fill="white"/>
+<g id="footer">
+<g id="Footer institucional">
+<path d="M-1039 -94.5H177C194.397 -94.5 208.5 -80.397 208.5 -63V402.5H-1070.5V-63L-1070.49 -63.8135C-1070.06 -80.8345 -1056.12 -94.5 -1039 -94.5Z" fill="#FFF1F0"/>
+<path d="M-1039 -94.5H177C194.397 -94.5 208.5 -80.397 208.5 -63V402.5H-1070.5V-63L-1070.49 -63.8135C-1070.06 -80.8345 -1056.12 -94.5 -1039 -94.5Z" stroke="#C9C9C9"/>
+<g id="Marca e redes">
+<g id="Redes sociais">
+<g id="Rede social">
+<rect x="-11" y="-11" width="40" height="40" rx="20" fill="#FF5541"/>
+<g id="facebook">
+<path id="Vector" d="M11.2501 1.49951H13.4999V4.49975H11.2501C11.0512 4.49975 10.8604 4.57878 10.7198 4.71944C10.5791 4.8601 10.5001 5.05088 10.5001 5.24981V7.49999H13.4999L12.7499 10.5002H10.5001V16.5007H7.50032V10.5002H5.25049V7.49999H7.50032V5.24981C7.50032 4.25517 7.89538 3.30127 8.59859 2.59795C9.3018 1.89463 10.2556 1.49951 11.2501 1.49951Z" stroke="#F7F5F1" stroke-linecap="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

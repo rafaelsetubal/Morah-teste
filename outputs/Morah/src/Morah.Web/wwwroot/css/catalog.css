@@ -1,0 +1,60 @@
+/* Catálogo: nós 346:5272, 346:5284, 370:1022. Poppins substitui Inter. */
+.catalog-intro { margin-top: 16px; margin-bottom: 24px; min-height: 268px; border-radius: 32px; background: var(--primitive-color-coral-50); position: relative; display: flex; align-items: center; padding: 24px; }
+.catalog-intro-copy { position: relative; z-index: 1; width: 389px; }
+.catalog-breadcrumb { display: flex; gap: 16px; font-size: 14px; align-items: center; margin-bottom: 24px; }
+.catalog-breadcrumb [aria-current] { font-weight: 600; }
+.catalog-intro h1 { font-size: 48px; line-height: 1; margin-bottom: 24px; }
+.catalog-intro h1 span { display: block; font-size: 31px; background: linear-gradient(158deg,#ffa000,#ff5541); background-clip: text; color: transparent; }
+.catalog-intro p { font-size: 14px; line-height: 21px; color: var(--semantic-color-text-secondary); }
+.catalog-intro > img { position: absolute; width: 61.4%; height: auto; right: 2.5%; bottom: 0; }
+.property-search.property-search--catalog { min-height: 124px; margin-bottom: 40px; }
+.property-search--catalog .search-submit { display: flex; align-items: center; gap: 16px; background: white; border: 1px solid var(--semantic-color-border-default); border-radius: 999px; padding: 8px 8px 8px 16px; font-size: 12px; font-weight: 600; }
+.catalog-results-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 28px; gap: 24px; }
+.catalog-results-heading h2 { font-size: 30px; line-height: 1.35; }
+.catalog-results-heading h2 span { color: var(--primitive-color-coral-500); }
+.catalog-results-heading > p { font-size: 12px; color: var(--semantic-color-text-tertiary); }
+.catalog-layout { display: grid; grid-template-columns: 214px minmax(0,1fr) 185px; gap: 16px; align-items: start; }
+.catalog-filters { border: 1px solid var(--semantic-color-border-default); border-radius: 24px; padding: 20px; display: flex; flex-direction: column; gap: 22px; }
+.catalog-filter-heading { display: flex; align-items: center; justify-content: space-between; gap: 6px; }
+.catalog-filter-heading h2 { font-size: 18px; display: flex; align-items: center; gap: 8px; }
+.catalog-filter-heading .morah-icon { font-size: 20px; color: var(--primitive-color-coral-500); }
+.catalog-filter-heading a { font-size: 10px; color: var(--primitive-color-coral-700); }
+.catalog-filters fieldset { padding: 0; margin: 0; border: 0; min-width: 0; }
+.catalog-filters legend { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+.catalog-filters label { display: flex; align-items: center; gap: 8px; min-height: 26px; font-size: 11px; color: var(--semantic-color-text-secondary); }
+.catalog-filters label span { flex: 1; }
+.catalog-filters input { accent-color: var(--primitive-color-coral-500); width: 16px; height: 16px; margin: 0; }
+.catalog-filters small { font-size: 11px; color: var(--semantic-color-text-tertiary); }
+.catalog-range { height: 4px; background: var(--primitive-color-coral-200); display: flex; justify-content: space-between; margin: 10px 0 16px; }
+.catalog-range i { width: 14px; height: 14px; background: var(--primitive-color-coral-500); border-radius: 50%; margin-top: -5px; }
+.catalog-apply { padding: 10px; border: 0; border-radius: 999px; background: var(--primitive-color-coral-700); color: white; font: inherit; font-size: 12px; cursor: pointer; }
+.catalog-toolbar { background: var(--primitive-color-coral-50); border: 1px solid var(--semantic-color-border-default); border-radius: 18px; padding: 10px 12px; min-height: 56px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; font-size: 11px; gap: 12px; }
+.catalog-toolbar form { display: flex; gap: 8px; align-items: center; }
+.catalog-toolbar label { color: var(--semantic-color-text-secondary); }
+.catalog-toolbar select { border-radius: 999px; border: 1px solid var(--semantic-color-border-default); background: white; padding: 8px; font: inherit; color: var(--semantic-color-text-primary); }
+.catalog-sort { font: inherit; border: 0; background: transparent; color: var(--primitive-color-coral-700); cursor: pointer; }
+.catalog-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.catalog-grid .property-card { width: 100%; height: auto; min-height: 566px; }
+.catalog-grid .property-card--editorial { min-height: 558px; }
+.catalog-grid .property-content h3 { font-size: 21px; line-height: 28px; }
+.catalog-pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 24px 0 80px; }
+.catalog-pagination > * { width: 40px; height: 40px; border-radius: 50%; border: 0; display: grid; place-items: center; }
+.catalog-pagination span { color: white; background: var(--primitive-color-coral-500); }
+.catalog-pagination button { color: #858583; background: #e5e5e3; }
+.catalog-empty { padding: 32px; background: var(--primitive-color-coral-50); border-radius: 24px; }
+.catalog-empty p { margin: 16px 0; }.catalog-empty a { color: var(--primitive-color-coral-700); }
+.catalog-finance { background: var(--primitive-color-coral-500); border-radius: 24px; overflow: hidden; color: white; }
+.catalog-finance-photo { display: block; width: 100%; height: 209px; object-fit: cover; }
+.catalog-finance-copy { padding: 16px 16px 20px; display: flex; flex-direction: column; gap: 12px; }
+.catalog-finance h2 { font-size: 18px; line-height: 24px; }.catalog-finance-copy > p { font-size: 12px; line-height: 17px; }
+.finance-shortcuts { background: white; border-radius: 20px; padding: 16px 14px; }
+.finance-shortcuts a { display: flex; align-items: center; gap: 8px; min-height: 70px; color: var(--semantic-color-text-primary); font-size: 11px; font-weight: 600; line-height: 14px; }
+.finance-shortcuts a + a { border-top: 1px solid var(--semantic-color-border-subtle); }
+.finance-shortcuts .morah-icon { background: var(--primitive-color-orange-50); color: var(--primitive-color-orange-500); border-radius: 50%; padding: 3px; flex: none; }
+.finance-shortcuts a:first-child .morah-icon { background: var(--primitive-color-coral-50); color: var(--primitive-color-coral-500); }
+.finance-contact { display: flex; justify-content: center; gap: 6px; align-items: center; min-height: 40px; border-radius: 999px; background: white; font-size: 10px; color: var(--semantic-color-text-primary); font-weight: 600; }
+.finance-contact .morah-icon { color: var(--primitive-color-coral-500); font-size: 16px; }
+.finance-assurance { display: flex; flex-direction: column; align-items: center; padding: 8px; font-size: 10px !important; }
+@media(max-width:1279px) { .catalog-layout { grid-template-columns: 214px minmax(0,1fr); }.catalog-finance { grid-column: 2; display: grid; grid-template-columns: 185px 1fr; }.catalog-finance-photo { height: 100%; }.catalog-intro-copy { width: 40%; }.catalog-intro > img { width: 57%; }.catalog-grid .property-content { padding: 16px; }.catalog-grid .property-content h3 { font-size: 18px; }.catalog-results-heading { flex-wrap: wrap; } }
+@media(max-width:900px) { .catalog-layout { grid-template-columns: 1fr; }.catalog-filters { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 20px; }.catalog-filter-heading { grid-column: 1/-1; }.catalog-finance { grid-column: 1; }.catalog-intro { display: flex; flex-direction: column; padding: 24px; gap: 20px; }.catalog-intro-copy { width: 100%; }.catalog-intro > img { position: static; width: 100%; max-width: 786px; }.catalog-results-heading h2 { font-size: 26px; } }
+@media(max-width:600px) { .catalog-filters { grid-template-columns: repeat(2,minmax(0,1fr)); }.catalog-grid { grid-template-columns: 1fr; }.catalog-toolbar { flex-wrap: wrap; }.catalog-toolbar form { flex-wrap: wrap; }.catalog-finance { display: block; }.catalog-finance-photo { height: 260px; object-position: center 35%; }.catalog-pagination { margin-bottom: 40px; }.property-search--catalog .search-submit { margin-left: auto; }.catalog-intro h1 { font-size: 40px; }.catalog-intro h1 span { font-size: 28px; } }

@@ -1,0 +1,138 @@
+type IconRadzenProps = {
+  className?: string;
+  name?: "arrow_forward";
+};
+
+function IconRadzen({ className, name = "arrow_forward" }: IconRadzenProps) {
+  return (
+    <div className={className || "content-stretch flex items-center justify-center relative size-[24px]"} data-node-id="36:8">
+      <p className="[word-break:break-word] font-['Material_Symbols_Rounded:Regular'] font-normal leading-[24px] relative shrink-0 text-[24px] text-[color:var(--semantic\/color\/text\/inverse,white)] whitespace-nowrap" data-node-id="36:9" style={{ fontVariationSettings: '"FILL" 0, "GRAD" 0' }}>
+        arrow_forward
+      </p>
+    </div>
+  );
+}
+
+export default function FormularioDeInteresse() {
+  return (
+    <div className="bg-[var(--semantic\/color\/surface\/brand,#ff5541)] border border-[var(--semantic\/color\/border\/default,#e5e5e3)] border-solid content-stretch flex flex-col gap-[18px] items-start overflow-clip p-[24px] relative rounded-[24px] shadow-[0px_2px_6px_0px_rgba(38,38,35,0.06),0px_1px_2px_0px_rgba(38,38,35,0.06)] size-full" data-node-id="384:13593" data-name="Formulário de interesse">
+      <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] h-[131px] items-start justify-center not-italic overflow-clip relative shrink-0 text-[color:var(--semantic\/color\/text\/inverse,white)] w-full" data-node-id="384:13594" data-name="Introdução">
+        <p className="font-['Poppins:Bold'] leading-[1.2] min-w-full relative shrink-0 text-[24px] w-[min-content]" data-node-id="384:13595">
+          Quero mais informações
+        </p>
+        <p className="font-['Inter:Regular'] font-normal leading-[1.45] relative shrink-0 text-[13px] w-[305px]" data-node-id="384:13596">
+          Preencha seus dados e um especialista Morah falará com você.
+        </p>
+      </div>
+      <div className="bg-[var(--semantic\/color\/background\/page,white)] content-stretch flex flex-col gap-[18px] items-start p-[16px] relative rounded-[16px] shrink-0 w-full" data-node-id="406:2596">
+        <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13597" data-name="Campo de formulário">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="384:13598">
+            Nome
+          </p>
+          <div className="bg-[var(--component\/search\/bg\/default,white)] border border-[var(--component\/search\/border\/default,#e5e5e3)] border-solid content-stretch flex h-[48px] items-center overflow-clip px-[16px] relative rounded-[10px] shrink-0 w-full" data-node-id="384:13599" data-name="Entrada">
+            <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Regular'] font-normal leading-[normal] min-w-px not-italic relative text-[14px] text-[color:var(--semantic\/color\/text\/tertiary,#858583)]" data-node-id="384:13600">
+              Como podemos te chamar?
+            </p>
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[12px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13601" data-name="Contato">
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px overflow-clip relative" data-node-id="384:13602" data-name="Campo de formulário">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="384:13603">
+              WhatsApp
+            </p>
+            <div className="bg-[var(--component\/search\/bg\/default,white)] border border-[var(--component\/search\/border\/default,#e5e5e3)] border-solid content-stretch flex h-[48px] items-center overflow-clip px-[16px] relative rounded-[10px] shrink-0 w-full" data-node-id="384:13604" data-name="Entrada">
+              <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Regular'] font-normal leading-[normal] min-w-px not-italic relative text-[14px] text-[color:var(--semantic\/color\/text\/tertiary,#858583)]" data-node-id="384:13605">
+                (00) 00000-0000
+              </p>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-[1_0_0] flex-col gap-[8px] items-start min-w-px overflow-clip relative" data-node-id="384:13606" data-name="Campo de formulário">
+            <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="384:13607">
+              E-mail
+            </p>
+            <div className="bg-[var(--component\/search\/bg\/default,white)] border border-[var(--component\/search\/border\/default,#e5e5e3)] border-solid content-stretch flex h-[48px] items-center overflow-clip px-[16px] relative rounded-[10px] shrink-0 w-full" data-node-id="384:13608" data-name="Entrada">
+              <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Regular'] font-normal leading-[normal] min-w-px not-italic relative text-[14px] text-[color:var(--semantic\/color\/text\/tertiary,#858583)]" data-node-id="384:13609">
+                seu@email.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="[word-break:break-word] content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13610" data-name="Campo de formulário">
+          <p className="font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="384:13611">
+            Renda familiar
+          </p>
+          <div className="bg-[var(--component\/search\/bg\/default,white)] border border-[var(--component\/search\/border\/default,#e5e5e3)] border-solid content-stretch flex font-normal h-[48px] items-center overflow-clip px-[16px] relative rounded-[10px] shrink-0 w-full" data-node-id="384:13612" data-name="Entrada">
+            <p className="flex-[1_0_0] font-['Inter:Regular'] leading-[normal] min-w-px not-italic relative text-[14px] text-[color:var(--semantic\/color\/text\/tertiary,#858583)]" data-node-id="384:13613">
+              Selecione uma faixa
+            </p>
+            <p className="font-['Material_Symbols_Rounded:Regular'] leading-[24px] relative shrink-0 text-[18px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] whitespace-nowrap" data-node-id="406:2594" style={{ fontVariationSettings: '"FILL" 0, "GRAD" 0' }}>
+              keyboard_arrow_down
+            </p>
+          </div>
+        </div>
+        <div className="content-stretch flex flex-col gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13614" data-name="Intenção de compra">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="384:13615">
+            Quando pretende comprar?
+          </p>
+          <div className="content-stretch flex gap-[8px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13616" data-name="Opções">
+            <div className="bg-[var(--semantic\/color\/background\/brand-soft,#fff1f0)] border border-[var(--semantic\/color\/text\/brand,#ff5541)] border-solid content-stretch flex flex-[1_0_0] items-start justify-center min-w-px overflow-clip px-[10px] py-[9px] relative rounded-[999px]" data-node-id="384:13617" data-name="Opção">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[11px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="384:13618">
+                Agora
+              </p>
+            </div>
+            <div className="bg-[var(--semantic\/color\/surface\/default,white)] border border-[var(--semantic\/color\/border\/default,#e5e5e3)] border-solid content-stretch flex flex-[1_0_0] items-start justify-center min-w-px overflow-clip px-[10px] py-[9px] relative rounded-[999px]" data-node-id="384:13619" data-name="Opção">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[11px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] whitespace-nowrap" data-node-id="384:13620">
+                3–6 meses
+              </p>
+            </div>
+            <div className="bg-[var(--semantic\/color\/surface\/default,white)] border border-[var(--semantic\/color\/border\/default,#e5e5e3)] border-solid content-stretch flex flex-[1_0_0] items-start justify-center min-w-px overflow-clip px-[10px] py-[9px] relative rounded-[999px]" data-node-id="384:13621" data-name="Opção">
+              <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[11px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] whitespace-nowrap" data-node-id="384:13622">
+                Só pesquisando
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[10px] items-start overflow-clip relative shrink-0 w-full" data-node-id="384:13623" data-name="Consentimento">
+          <div className="border border-[var(--semantic\/color\/border\/default,#e5e5e3)] border-solid relative rounded-[4px] shrink-0 size-[16px]" data-node-id="384:13624" data-name="Seleção" />
+          <p className="[word-break:break-word] flex-[1_0_0] font-['Inter:Regular'] font-normal leading-[0] min-w-px not-italic relative text-[11px] text-[color:var(--semantic\/color\/text\/secondary,#676765)]" data-node-id="384:13625">
+            <span className="leading-[1.4]">{`Concordo em receber contato da Morah e li a `}</span>
+            <span className="[text-decoration-skip-ink:none] [text-underline-position:from-font] decoration-from-font decoration-solid leading-[1.4] underline">Política de Privacidade.</span>
+          </p>
+        </div>
+        <div className="content-stretch flex gap-[8px] h-[56px] items-center justify-center px-[28px] relative rounded-[999px] shrink-0 w-full" data-node-id="384:13626" style={{ backgroundImage: "linear-gradient(147.01432029293622deg, rgb(255, 85, 65) 0%, rgb(255, 160, 0) 81.65%)" }} data-name="Button / Morah">
+          <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[20px] not-italic relative shrink-0 text-[15px] text-[color:var(--component\/button\/primary\/text,white)] whitespace-nowrap" data-node-id="I384:13626;30:101">
+            Quero falar com um especialista
+          </p>
+          <IconRadzen className="content-stretch flex items-center justify-center relative shrink-0 size-[24px]" />
+        </div>
+        <p className="[word-break:break-word] font-['Inter:Regular'] font-normal leading-[1.4] not-italic relative shrink-0 text-[11px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] text-center w-full" data-node-id="406:2597">{`Seus dados estão seguros lorem `}</p>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: Morah/Gradient/01 Primary Coral + Orange: , Morah/Elevation/Sm: Effect(type: DROP_SHADOW, color: #2626230F, offset: (0, 1), radius: 2, spread: 0); Effect(type: DROP_SHADOW, color: #2626230F, offset: (0, 2), radius: 6, spread: 0).
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Button / Morah
+**Node ID:** 30:160
+
+Morah button mapped to RadzenButton. Supports Label, leading/trailing Radzen icons, icon swap, type, size and state.
+
+## Name=arrow_forward
+**Node ID:** 36:8
+
+Radzen Icon="arrow\_forward" · Material Symbols Rounded.
+
+## Icon / Radzen
+**Node ID:** 36:28
+
+Icons aligned to Radzen Icon names and Material Symbols Rounded.
+Images and SVGs will be stored as constants, e.g. const image = `${assetPathPrefix}/<asset file name>`, where assetPathPrefix is declared once at the top of the code and every asset URL interpolates it. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

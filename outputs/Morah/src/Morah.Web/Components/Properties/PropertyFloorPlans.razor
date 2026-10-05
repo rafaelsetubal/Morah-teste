@@ -1,0 +1,12 @@
+<section id="plantas" class="detail-section detail-plans" aria-label="Plantas do empreendimento">
+    <PropertySectionHeading Eyebrow="PLANTAS" Title="Espaços que fazem sentido para você" Description="Escolha a tipologia e veja como cada metro quadrado foi aproveitado para trazer conforto e praticidade." />
+    <div data-plan-tabs>
+        <div class="detail-plan-tabs" role="tablist" aria-label="Tipologias">@for(var i = 0; i < Labels.Length; i++) { <button id="@($"plan-tab-{i}")" type="button" role="tab" aria-selected="@(i == 0 ? "true" : "false")" aria-controls="plan-panel" tabindex="@(i == 0 ? 0 : -1)" data-plan-index="@i">@Labels[i]</button> }</div>
+        <div class="detail-plan-content" id="plan-panel" role="tabpanel" aria-labelledby="plan-tab-0">
+            <div class="detail-plan-features"><p><MorahIcon Name="MorahIconName.Bed" />2 quartos</p><p><MorahIcon Name="MorahIconName.SquareFoot" /><span data-plan-area>43 a 50 m²</span></p><p><MorahIcon Name="MorahIconName.Elevator" />Elevador</p><p><MorahIcon Name="MorahIconName.Accessible" />Unidades acessíveis</p></div>
+            <div class="detail-plan-placeholder" role="img" aria-label="Espaço reservado para a imagem da planta, ainda não fornecida"></div>
+        </div>
+    </div>
+    <p class="detail-disclaimer">As imagens são ilustrativas. Móveis e decoração não fazem parte do contrato. Consulte o memorial descritivo.</p>
+</section>
+@code { private static readonly string[] Labels = ["2 quartos • 43 m²", "2 quartos • 47 m²", "2 quartos PCD"]; }

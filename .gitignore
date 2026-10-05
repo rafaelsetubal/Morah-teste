@@ -1,0 +1,25 @@
+# Build and IDE outputs
+**/bin/
+**/obj/
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Packages and local SDK / CLI cache
+work/dotnet-cli/
+work/nuget-packages/
+work/nuget-feed/
+
+# Logs
+*.log
+
+# Compressed archives
+*.zip
+
+# OS files
+Thumbs.db
+[Dd]esktop.ini
+.DS_Store

@@ -1,0 +1,18 @@
+<article class="property-card @(Item.Editorial ? "property-card--editorial" : "")">
+    <div class="property-media"><img src="@($"images/figma/{Item.Image}")" alt="Fachada ilustrativa do empreendimento" loading="lazy" /><span class="property-status property-status--@Item.StatusKey">@Item.Status</span></div>
+    <div class="property-content">
+        <h3>Nome do empreendimento</h3>
+        <p class="property-location">@if (!Item.Editorial) { <MorahIcon Name="MorahIconName.LocationOn" /> } Cidade — UF</p>
+        <div class="property-bullets">
+            <span><MorahIcon Name="MorahIconName.Bed" />@Item.Rooms</span>
+            <span class="bullet-benefit"><MorahIcon Name="@(Item.Editorial ? MorahIconName.Shield : MorahIconName.Payments)" />@Item.Benefit</span>
+            <span class="bullet-area"><MorahIcon Name="MorahIconName.SquareFoot" />43 a 50 m²</span>
+            <span class="bullet-program"><MorahIcon Name="@(Item.Program == "Financiamento Caixa" ? MorahIconName.Savings : Item.Editorial ? MorahIconName.Pets : MorahIconName.Home)" />@(Item.Program ?? (Item.Editorial ? "Espaço pet" : "Minha Casa Minha Vida"))</span>
+        </div>
+        @if (!Item.Editorial) { <div class="property-action"><a href="@($"/empreendimentos/{Item.Key}")">Conhecer detalhes</a><MorahIconButton Icon="MorahIconName.ArrowForward" Size="MorahButtonSize.SM" AriaLabel="Conhecer detalhes do empreendimento" Href="@($"/empreendimentos/{Item.Key}")" /></div> }
+    </div>
+    @if (Item.Editorial) { <div class="editorial-action"><a href="@($"/empreendimentos/{Item.Key}")">Conhecer detalhes</a><MorahIconButton Icon="MorahIconName.ArrowForward" Size="MorahButtonSize.SM" AriaLabel="Conhecer detalhes do empreendimento" Href="@($"/empreendimentos/{Item.Key}")" CssClass="button-pink" /></div> }
+</article>
+@code {
+    [Parameter, EditorRequired] public PropertyPreview Item { get; set; } = default!;
+}

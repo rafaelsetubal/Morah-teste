@@ -1,0 +1,133 @@
+const assetPathPrefix = "https://www.figma.com/api/mcp/asset/c47ff0a6-c5cc-4500-8a75-d4e9972336dd";
+const imgImage17 = `${assetPathPrefix}/a2210.png`;
+
+export default function Localizacao() {
+  return (
+    <div className="bg-[var(--semantic\/color\/surface\/default,white)] content-stretch flex flex-col gap-[16px] items-start pb-[96px] pt-[40px] px-[80px] relative size-full" data-node-id="415:3526" data-name="Localização">
+      <div className="content-stretch flex items-end overflow-clip relative shrink-0 w-full" data-node-id="415:3527" data-name="Cabeçalho">
+        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip relative" data-node-id="415:3528" data-name="Introdução">
+          <div className="[word-break:break-word] content-stretch flex flex-col gap-[12px] items-start not-italic overflow-clip relative shrink-0 w-full" data-node-id="415:3529" data-name="Título da seção">
+            <p className="font-['Inter:Bold'] font-bold leading-[normal] relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] tracking-[0.96px] uppercase whitespace-nowrap" data-node-id="415:3530">
+              Localização
+            </p>
+            <p className="font-['Poppins:Bold'] leading-[1.18] min-w-full relative shrink-0 text-[36px] text-[color:var(--semantic\/color\/text\/primary,#262623)] w-[min-content]" data-node-id="415:3531">
+              Perto do que importa para sua rotina
+            </p>
+            <p className="font-['Inter:Regular'] font-normal leading-[1.55] min-w-full relative shrink-0 text-[16px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] w-[min-content]" data-node-id="415:3532">
+              Uma região com serviços, escolas, mobilidade e comércio a poucos minutos de casa.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex items-center justify-center relative shrink-0" data-node-id="415:3625">
+        <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[normal] not-italic relative shrink-0 text-[16px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3623">
+          Av. das Palmeiras, 850 - Jardim Aurora
+        </p>
+      </div>
+      <div className="content-stretch flex flex-col gap-[24px] items-start overflow-clip relative shrink-0 w-full" data-node-id="415:3547" data-name="Mapa e informações">
+        <div className="bg-[#dededa] content-stretch flex flex-col h-[403px] items-start justify-between overflow-clip relative rounded-[24px] shrink-0 w-[856px]" data-node-id="415:3548" data-name="Mapa">
+          <div className="aspect-[1778/838] relative shrink-0 w-full" data-node-id="415:3621" data-name="image 17">
+            <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage17} />
+          </div>
+        </div>
+        <div className="content-stretch flex gap-[16px] items-start overflow-clip relative shrink-0 w-[856px]" data-node-id="415:3562" data-name="Informações laterais">
+          <div className="[word-break:break-word] bg-[#fafaf8] content-stretch flex flex-[1_0_0] flex-col gap-[16px] h-[313px] items-start leading-[normal] min-w-px not-italic overflow-clip p-[20px] relative rounded-[16px]" data-node-id="415:3563" data-name="Distâncias">
+            <p className="font-['Poppins:Bold'] relative shrink-0 text-[18px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="415:3564">
+              Pontos próximos
+            </p>
+            <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="430:3947">
+              <div className="border-[var(--semantic\/color\/border\/subtle,#f3f3f2)] border-b border-solid content-stretch flex gap-[12px] items-center py-[12px] relative shrink-0 w-full" data-node-id="415:3565" data-name="Ponto próximo">
+                <p className="flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold min-w-px relative text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="415:3567">
+                  Supermercado Boa Compra
+                </p>
+                <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3568">
+                  4 min
+                </p>
+              </div>
+              <div className="border-[var(--semantic\/color\/border\/subtle,#f3f3f2)] border-b border-solid content-stretch flex gap-[12px] items-center py-[12px] relative shrink-0 w-full" data-node-id="415:3569" data-name="Ponto próximo">
+                <p className="flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold min-w-px relative text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="415:3571">
+                  EMEF Jardim Aurora
+                </p>
+                <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3572">
+                  6 min
+                </p>
+              </div>
+              <div className="border-[var(--semantic\/color\/border\/subtle,#f3f3f2)] border-b border-solid content-stretch flex gap-[12px] items-center py-[12px] relative shrink-0 w-full" data-node-id="415:3573" data-name="Ponto próximo">
+                <p className="flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold min-w-px relative text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="415:3575">
+                  Terminal Campo Grande
+                </p>
+                <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3576">
+                  8 min
+                </p>
+              </div>
+              <div className="border-[var(--semantic\/color\/border\/subtle,#f3f3f2)] border-b border-solid content-stretch flex gap-[12px] items-center py-[12px] relative shrink-0 w-full" data-node-id="415:3577" data-name="Ponto próximo">
+                <p className="flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold min-w-px relative text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="415:3579">
+                  UPA Campo Grande
+                </p>
+                <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3580">
+                  9 min
+                </p>
+              </div>
+              <div className="border-[var(--semantic\/color\/border\/subtle,#f3f3f2)] border-b border-solid content-stretch flex gap-[12px] items-center py-[12px] relative shrink-0 w-full" data-node-id="415:3615" data-name="Ponto próximo">
+                <p className="flex-[1_0_0] font-['Inter:Semi_Bold'] font-semibold min-w-px relative text-[13px] text-[color:var(--semantic\/color\/text\/primary,#262623)]" data-node-id="415:3617">
+                  UPA Campo Grande
+                </p>
+                <p className="font-['Inter:Bold'] font-bold relative shrink-0 text-[12px] text-[color:var(--semantic\/color\/text\/brand,#ff5541)] whitespace-nowrap" data-node-id="415:3618">
+                  9 min
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--semantic\/color\/background\/orange-soft,#fff7eb)] content-stretch flex flex-[1_0_0] flex-col gap-[16px] items-start min-w-px overflow-clip p-[20px] relative rounded-[16px]" data-node-id="415:3581" data-name="Estande de vendas">
+            <div className="bg-[#dededa] content-stretch flex flex-col h-[150px] items-start justify-between p-[24px] relative rounded-[24px] shrink-0 w-full" data-node-id="415:3582" data-name="Mídia editável" />
+            <div className="[word-break:break-word] content-stretch flex flex-col gap-[6px] items-start not-italic overflow-clip relative shrink-0 w-full" data-node-id="415:3589" data-name="Conteúdo">
+              <p className="font-['Poppins:Bold'] leading-[normal] relative shrink-0 text-[18px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="415:3590">
+                Visite nosso estande
+              </p>
+              <p className="font-['Inter:Regular'] font-normal leading-[1.4] min-w-full relative shrink-0 text-[13px] text-[color:var(--semantic\/color\/text\/secondary,#676765)] w-[min-content]" data-node-id="415:3591">
+                Av. das Palmeiras, 850 • Aberto todos os dias, das 9h às 18h
+              </p>
+            </div>
+            <div className="content-stretch flex items-start overflow-clip relative shrink-0 w-full" data-node-id="415:3592" data-name="Ações">
+              <div className="bg-[var(--component\/button\/outline\/bg\/default,rgba(255,255,255,0.12))] border-[1.5px] border-[var(--component\/button\/outline\/border\/default,#ff5541)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] h-[40px] items-center justify-center min-w-px px-[16px] relative rounded-[999px]" data-node-id="415:3593" data-name="Button / Morah">
+                <div className="content-stretch flex items-center justify-center relative shrink-0 size-[16px]" data-node-id="I415:3593;36:101" data-name="Leading icon">
+                  <p className="[word-break:break-word] font-['Material_Symbols_Rounded:Regular'] font-normal leading-[24px] relative shrink-0 text-[24px] text-[color:var(--semantic\/color\/text\/primary,#262623)] whitespace-nowrap" data-node-id="I415:3593;36:101;170:405" style={{ fontVariationSettings: '"FILL" 0, "GRAD" 0' }}>
+                    map
+                  </p>
+                </div>
+                <p className="[word-break:break-word] font-['Inter:Semi_Bold'] font-semibold leading-[20px] not-italic relative shrink-0 text-[15px] text-[color:var(--primitive\/color\/coral\/500-\(p\),#ff5541)] whitespace-nowrap" data-node-id="I415:3593;30:125">
+                  Como chegar
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## Button / Morah
+**Node ID:** 30:160
+
+Morah button mapped to RadzenButton. Supports Label, leading/trailing Radzen icons, icon swap, type, size and state.
+
+## Name=map
+**Node ID:** 170:404
+
+Radzen Icon="map" · Material Symbols Rounded.
+
+## Icon / Radzen
+**Node ID:** 36:28
+
+Icons aligned to Radzen Icon names and Material Symbols Rounded.
+Images and SVGs will be stored as constants, e.g. const image = `${assetPathPrefix}/<asset file name>`, where assetPathPrefix is declared once at the top of the code and every asset URL interpolates it. These constants will be used in the code as the source for the image, ex: <img src={image} />. Image assets are stored on a remote server for 7 days and can be fetched using the provided URLs until they expire.

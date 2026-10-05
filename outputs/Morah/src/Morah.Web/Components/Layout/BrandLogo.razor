@@ -1,0 +1,16 @@
+@if (Href is not null)
+{
+    <a href="@Href" class="brand-logo brand-logo--@Layout.ToString().ToLowerInvariant() @CssClass"><img src="@Source" alt="@Alt" /></a>
+}
+else
+{
+    <span class="brand-logo brand-logo--@Layout.ToString().ToLowerInvariant() @CssClass"><img src="@Source" alt="@Alt" /></span>
+}
+@code {
+    [Parameter] public BrandLogoLayout Layout { get; set; }
+    [Parameter] public BrandLogoColor Color { get; set; }
+    [Parameter] public string Alt { get; set; } = "Morah — Soluções Imobiliárias";
+    [Parameter] public string? Href { get; set; }
+    [Parameter] public string? CssClass { get; set; }
+    private string Source => $"images/figma/logo-{Layout.ToString().ToLowerInvariant()}-{Color.ToString().ToLowerInvariant()}.svg";
+}

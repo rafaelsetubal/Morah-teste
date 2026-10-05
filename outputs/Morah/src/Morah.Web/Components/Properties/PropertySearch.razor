@@ -1,0 +1,24 @@
+<form class="property-search site-container @(ShowHeading ? "" : "property-search--catalog")" action="@Action" method="get" aria-label="Encontre seu apê ideal">
+    @if (ShowHeading) { <h2>Encontre <span>seu apê ideal</span></h2> }
+    <div class="search-fields">
+        <PropertySearchField Name="cidade" Label="Cidade" Prompt="Selecione a cidade" Placeholder="Selecione a cidade" Icon="MorahIconName.LocationOn" Searchable="true" Options="CityOptions" />
+        <PropertySearchField Name="bairro" Label="Bairro" Prompt="Selecione o bairro" Placeholder="Selecione o bairro" Icon="MorahIconName.Map" Searchable="true" Options="NeighborhoodOptions" />
+        <PropertySearchField Name="quartos" Label="Quartos" Prompt="Selecione os quartos" Icon="MorahIconName.Bed" Multiple="true" Options="RoomOptions" Selected="SelectedRooms" />
+        <PropertySearchField Name="status" Label="Status da obra" Prompt="Selecione o status" Icon="MorahIconName.Apartment" Multiple="true" Options="StatusOptions" Selected="SelectedStatus" />
+    </div>
+    <div class="search-submit">@if (!ShowHeading) { <span>Fazer a busca</span> }<MorahButton LeadingIcon="MorahIconName.Search" ShowLabel="false" IconOnly="true" Size="MorahButtonSize.LG" AriaLabel="Buscar empreendimentos" ButtonType="MorahButtonType.Submit" /></div>
+</form>
+@code {
+    [Parameter] public string? Status { get; set; }
+    [Parameter] public string? Rooms { get; set; }
+    [Parameter] public string[]? Statuses { get; set; }
+    [Parameter] public string[]? RoomSelections { get; set; }
+    [Parameter] public string Action { get; set; } = "/#destaques";
+    [Parameter] public bool ShowHeading { get; set; } = true;
+    private string[] SelectedStatus => Statuses ?? (string.IsNullOrEmpty(Status) ? [] : [Status]);
+    private string[] SelectedRooms => RoomSelections ?? (string.IsNullOrEmpty(Rooms) ? [] : [Rooms]);
+    private static readonly SearchOption[] CityOptions = [new("cidade-uf", "Cidade — UF")];
+    private static readonly SearchOption[] NeighborhoodOptions = [];
+    private static readonly SearchOption[] RoomOptions = [new("1", "1 quarto"), new("2", "2 quartos"), new("3", "3 quartos"), new("4", "4 quartos")];
+    private static readonly SearchOption[] StatusOptions = [new("prelancamento", "Pré-lançamento"), new("lancamento", "Lançamento"), new("construcao", "Em construção"), new("pronto", "Pronto para morar"), new("vendido", "100% vendido")];
+}
