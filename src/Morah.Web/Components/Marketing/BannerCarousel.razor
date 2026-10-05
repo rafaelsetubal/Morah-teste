@@ -1,0 +1,9 @@
+<section class="banner-carousel site-container" aria-labelledby="hero-title" aria-roledescription="carrossel" data-banner-carousel>
+    <h1 id="hero-title" class="visually-hidden">Acreditamos no poder de um lar.</h1>
+    <div class="banner-slides">@for(var i = 0; i < Slides.Length; i++) { <div class="banner-slide" data-banner-slide hidden="@(i != 0)" role="group" aria-roledescription="slide" aria-label="@($"{i + 1} de {Slides.Length}")"><img class="hero-artwork" src="@Slides[i].Source" width="1280" height="400" alt="@Slides[i].Alt" fetchpriority="@(i == 0 ? "high" : "auto")" /></div> }</div>
+    <button class="banner-arrow banner-arrow--previous" type="button" data-banner-direction="-1" aria-label="Banner anterior"><MorahIcon Name="MorahIconName.ChevronLeft" /></button>
+    <button class="banner-arrow banner-arrow--next" type="button" data-banner-direction="1" aria-label="Próximo banner"><MorahIcon Name="MorahIconName.ChevronRight" /></button>
+    <div class="banner-indicators" aria-label="Selecionar banner">@for(var i = 0; i < Slides.Length; i++) { <button type="button" data-banner-index="@i" aria-label="@($"Mostrar banner {i + 1}")" aria-current="@(i == 0 ? "true" : null)"><span></span></button> }</div>
+    <span class="visually-hidden" data-banner-announcement aria-live="polite">Banner 1 de 3</span>
+</section>
+@code { [Parameter] public BannerSlide[] Slides { get; set; } = []; }

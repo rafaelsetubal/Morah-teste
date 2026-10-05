@@ -8,15 +8,12 @@
 *.userosscache
 *.sln.docstates
 
-# Packages and local SDK / CLI cache
-work/dotnet-cli/
-work/nuget-packages/
-work/nuget-feed/
+# Auxiliary folders from design audit / extraction
+work/
+outputs/
 
-# Logs
+# Logs and temporary files
 *.log
-
-# Compressed archives
 *.zip
 
 # OS files

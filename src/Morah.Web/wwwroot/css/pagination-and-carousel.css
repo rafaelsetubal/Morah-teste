@@ -1,0 +1,16 @@
+/* Figma 346:5397: círculos 40px, espaçamento 8px, active coral, outline/disabled. */
+.morah-pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 24px 0 80px; }
+.morah-pagination .pagination-page,.morah-pagination .pagination-arrow { width: 40px; height: 40px; flex: none; display: grid; place-items: center; border: 1px solid var(--semantic-color-border-subtle); border-radius: 999px; background: white; color: var(--semantic-color-text-secondary); font-size: 13px; font-weight: 700; padding: 0; }
+.morah-pagination [aria-current=page] { color: white; background: var(--primitive-color-coral-500); }
+.morah-pagination .pagination-arrow { border: 1.5px solid var(--primitive-color-coral-500); color: var(--primitive-color-coral-500); background: var(--component-button-outline-bg-default); }
+.morah-pagination .pagination-arrow:disabled { background: var(--component-button-disabled-bg); color: var(--component-button-disabled-text); border-color: transparent; cursor: default; }
+.morah-pagination .morah-icon { color: inherit; background: transparent; font-size: 24px; }
+.pagination-ellipsis { font-size: 13px; color: var(--semantic-color-text-tertiary); }
+.morah-pagination a:focus-visible,.banner-carousel button:focus-visible { outline: 3px solid var(--primitive-color-orange-500); outline-offset: 3px; }
+.banner-carousel { position: relative; margin-top: 16px; margin-bottom: 40px; }
+.banner-slide[hidden] { display: none; }.banner-slide { border-radius: 32px; overflow: hidden; }
+.banner-arrow { position: absolute; top: calc(50% - 20px); width: 40px; height: 40px; border: 0; border-radius: 999px; background: var(--primitive-color-pink-50); color: var(--primitive-color-coral-500); display: grid; place-items: center; box-shadow: 0 1px 3px rgba(38,38,35,.06); }
+.banner-arrow--previous { left: 10px; }.banner-arrow--next { right: 10px; }
+.banner-indicators { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; }
+.banner-indicators button { display: grid; place-items: center; border: 0; padding: 0; width: 24px; height: 32px; background: transparent; }.banner-indicators button[aria-current] { width: 60px; }.banner-indicators span { width: 9px; height: 8px; border-radius: 99px; background: var(--semantic-color-text-disabled); }.banner-indicators [aria-current] span { width: 60px; background: var(--primitive-color-coral-500); }
+@media(max-width:600px) { .morah-pagination { margin-bottom: 40px; }.banner-arrow { width: 32px; height: 32px; top: calc(50% - 16px); }.banner-arrow--previous { left: 8px; }.banner-arrow--next { right: 8px; }.banner-indicators { bottom: 0; }.banner-indicators button[aria-current] { width: 36px; }.banner-indicators [aria-current] span { width: 36px; }.banner-slide { border-radius: 16px; } }
