@@ -1,0 +1,2 @@
+<article class="detail-construction-media @(Compact ? "detail-construction-media--compact" : "")"><p><MorahIcon Name="MorahIconName.CalendarMonth" />@Label</p><div class="detail-construction-thumbnail"><img src="images/figma/detail-work-thumb.png" alt="Miniatura ilustrativa do registro da obra" loading="lazy" /><span aria-label="Mais dez imagens indicadas na referência">+10</span></div></article>
+@code { [Parameter] public string Label { get; set; } = ""; [Parameter] public bool Compact { get; set; } }

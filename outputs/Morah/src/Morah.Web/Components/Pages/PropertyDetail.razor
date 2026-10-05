@@ -1,0 +1,21 @@
+@page "/empreendimentos/{Slug}"
+@if (KnownSlug) {
+    <PageTitle>Vista do Parque — Morah</PageTitle>
+    <HeadContent><meta name="description" content="Conheça o Vista do Parque: plantas, lazer, localização e evolução da obra." /><meta name="robots" content="noindex, nofollow" /></HeadContent>
+    <div class="property-detail site-container">
+        <nav class="detail-breadcrumb" aria-label="Caminho da página"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/empreendimentos">Encontre seu Apê</a><span aria-hidden="true">›</span><span aria-current="page">Vista do Parque</span></nav>
+        <div class="detail-layout">
+            <div class="detail-main"><PropertyGallery /><PropertySectionNavigation /><PropertyOverview /><PropertyFloorPlans /><PropertyLeisure /><PropertyLocation /><ConstructionProgress /></div>
+            <PropertyInterestForm />
+        </div>
+    </div>
+} else {
+    <PageTitle>Empreendimento não encontrado — Morah</PageTitle>
+    <section class="detail-not-found site-container"><h1>Empreendimento não encontrado</h1><p>Explore os empreendimentos disponíveis para encontrar seu apê.</p><MorahButton Label="Ver empreendimentos" Href="/empreendimentos" /></section>
+}
+@code {
+    [Parameter] public string Slug { get; set; } = "";
+    private bool KnownSlug => Slug == "vista-do-parque" || CatalogProperties.Items.Any(x => x.Key == Slug) || HomeProperties.Items.Any(x => x.Key == Slug);
+    protected override void OnParametersSet() { if (!KnownSlug && HttpContext is not null) HttpContext.Response.StatusCode = 404; }
+    [CascadingParameter] public Microsoft.AspNetCore.Http.HttpContext? HttpContext { get; set; }
+}

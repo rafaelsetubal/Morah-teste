@@ -1,0 +1,10 @@
+<section id="localizacao" class="detail-section detail-location" aria-label="Localização do empreendimento">
+    <PropertySectionHeading Eyebrow="LOCALIZAÇÃO" Title="Perto do que importa para sua rotina" Description="Uma região com serviços, escolas, mobilidade e comércio a poucos minutos de casa." />
+    <p class="detail-location-address">Av. das Palmeiras, 850 - Jardim Aurora</p>
+    <img class="detail-map" src="images/figma/detail-map.png" alt="Mapa ilustrativo da região de Campinas, conforme referência do empreendimento" loading="lazy" />
+    <div class="detail-location-cards">
+        <article class="detail-nearby"><h3>Pontos próximos</h3>@foreach (var point in Points) { <p><span>@point.Name</span><strong>@point.Time min</strong></p> }</article>
+        <article class="detail-sales-office"><div class="detail-office-placeholder" role="img" aria-label="Imagem do estande ainda não fornecida"></div><h3>Visite nosso estande</h3><p>Av. das Palmeiras, 850 • Aberto todos os dias, das 9h às 18h.</p><MorahButton Label="Como chegar" LeadingIcon="MorahIconName.Map" Variant="MorahButtonVariant.Outline" Size="MorahButtonSize.SM" Href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20das%20Palmeiras%20850%20Jardim%20Aurora%20Campinas%20SP" /></article>
+    </div>
+</section>
+@code { private static readonly (string Name, int Time)[] Points = [("Supermercado Boa Compra",4),("EMEF Jardim Aurora",6),("Terminal Campo Grande",8),("UPA Campo Grande",9),("UPA Campo Grande",9)]; }

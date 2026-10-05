@@ -1,0 +1,8 @@
+<section id="evolucao" class="detail-section detail-construction" aria-label="Evolução da obra">
+    <PropertySectionHeading Eyebrow="EVOLUÇÃO DA OBRA" Title="Acompanhe o Vista do Parque ganhando forma" Description="Atualização de setembro de 2026. Transparência em cada etapa até a entrega das chaves." />
+    <div class="detail-progress-general"><div><span>Progresso geral</span><strong>38%</strong></div><progress value="38" max="100" aria-label="Progresso geral da obra: 38%">38%</progress></div>
+    <div class="detail-construction-stages">@foreach(var stage in Stages) { <article><p><span>@stage.Label</span><strong>@stage.Value%</strong></p><progress value="@stage.Value" max="100" aria-label="@($"{stage.Label}: {stage.Value}%")">@stage.Value%</progress></article> }</div>
+    <div class="detail-work-current"><ConstructionMediaCard Label="Imagem atual da obra • Outubro de 2026" /><ConstructionMediaCard Label="Imagem atual da obra • Setembro de 2026" /></div>
+    <div class="detail-work-history"><ConstructionMediaCard Label="Agosto" Compact="true" /><ConstructionMediaCard Label="Julho" Compact="true" /><ConstructionMediaCard Label="Maio" Compact="true" /></div>
+</section>
+@code { private static readonly (string Label,int Value)[] Stages = [("Fundação",100),("Estrutura",72),("Alvenaria",38),("Acabamentos",8)]; }
