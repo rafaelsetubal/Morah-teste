@@ -1,0 +1,17 @@
+<section id="duvidas" class="detail-section" aria-label="Dúvidas sobre o empreendimento">
+    <PropertySectionHeading Eyebrow="DÚVIDAS FREQUENTES" Title="Ainda tem dúvidas?" Description="Encontre informações sobre o empreendimento." />
+    <p class="property-faq-disclaimer">Conteúdo demonstrativo — respostas provisórias para o mockup.</p>
+    <div class="property-faq-list">
+        @foreach (var item in Items)
+        {
+            <details class="property-faq-item" name="product-faq">
+                <summary><span>@item.Question</span><span class="property-faq-toggle" aria-hidden="true">+</span></summary>
+                <div class="property-faq-answer">@if (item.Section is not null) { <p>@item.Answer <a href="@($"{RoutePath}#{item.Section}")">Ver seção @item.SectionName</a>.</p> } else { <p>@item.Answer</p> }</div>
+            </details>
+        }
+    </div>
+</section>
+@code {
+    [Parameter] public IReadOnlyList<PropertyFaqItem> Items { get; set; } = PropertyFaqExamples.Items;
+    [Parameter] public string RoutePath { get; set; } = "/empreendimentos/vista-do-parque";
+}

@@ -93,3 +93,118 @@
  .mobile-interest-button .morah-button__icon { width: 16px; }
  .mobile-interest-button .morah-icon { font-size: 18px; }
 }
+
+/* Faixas vetoriais de lazer exportadas pelo usuário; dimensões-raiz dos SVG preservadas. */
+.detail-leisure-scroll { overflow: visible; }
+.detail-leisure-grid { display: none; width: max-content; max-width: 100%; grid-template-columns: repeat(4,125px); margin-inline: auto; }
+.detail-leisure-grid--four { display: grid; }
+.detail-leisure-column { width: 125px; display: flex; flex-direction: column; background-repeat: repeat-y; background-size: 125px 254px; }
+.detail-leisure-column--left { background-image: url('../images/figma/leisure-patterns/bg-left.svg'); }
+.detail-leisure-column--center-left { background-image: url('../images/figma/leisure-patterns/bg-center-left.svg'); }
+.detail-leisure-column--center-right { background-image: url('../images/figma/leisure-patterns/bg-center-right.svg'); }
+.detail-leisure-column--right { background-image: url('../images/figma/leisure-patterns/bg-right.svg'); }
+.detail-leisure-column--right2 { background-image: url('../images/figma/leisure-patterns/bg-right2.svg'); }
+.detail-leisure-column .detail-leisure-card { flex: 0 0 125px; width: 125px; height: 125px; aspect-ratio: auto; border-radius: 0; padding: 16px 8px; gap: 12px; background: transparent; color: white; }
+.detail-leisure-column .detail-leisure-card img { transform: scaleY(-1); }
+.detail-leisure-column .detail-leisure-card p { max-width: 103px; }
+@media(max-width:600px) {
+ .detail-leisure-grid--four { display: none; }
+ .detail-leisure-grid--three { display: grid; grid-template-columns: repeat(3,125px); }
+}
+
+
+/* Lazer em uma única faixa horizontal, com os cinco fundos fornecidos. */
+.detail-leisure-scroll { overflow-x: auto; overflow-y: hidden; width: 100%; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); }
+.detail-leisure-scroll::-webkit-scrollbar { height: 5px; }
+.detail-leisure-scroll::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }
+.detail-leisure-scroll::-webkit-scrollbar-thumb { background: var(--primitive-color-coral-300); border-radius: 999px; }
+.detail-leisure-row { display: flex; width: max-content; min-width: 100%; gap: 0; }
+.detail-leisure-row .detail-leisure-card { flex: 0 0 clamp(88px,12vw,150px); width: clamp(88px,12vw,150px); aspect-ratio: 1; height: auto; border: 0; border-radius: 0; padding: 14px 8px; gap: 10px; background-color: transparent; background-repeat: no-repeat; background-size: 100% 200%; background-position: center top; color: white; }
+.detail-leisure-row .detail-leisure-pattern--left { background-image: url('../images/figma/leisure-patterns/bg-left.svg'); }
+.detail-leisure-row .detail-leisure-pattern--center-left { background-image: url('../images/figma/leisure-patterns/bg-center-left.svg'); }
+.detail-leisure-row .detail-leisure-pattern--center-right { background-image: url('../images/figma/leisure-patterns/bg-center-right.svg'); }
+.detail-leisure-row .detail-leisure-pattern--right { background-image: url('../images/figma/leisure-patterns/bg-right.svg'); }
+.detail-leisure-row .detail-leisure-pattern--right2 { background-image: url('../images/figma/leisure-patterns/bg-right2.svg'); }
+.detail-leisure-row .detail-leisure-card img { transform: scaleY(-1); }
+.detail-leisure-row .detail-leisure-card p { max-width: 12ch; font-size: clamp(10px,1vw,13px); }
+@media(max-width:600px) { .detail-leisure-row .detail-leisure-card { flex-basis: clamp(88px,25vw,112px); width: clamp(88px,25vw,112px); } }
+
+@media(max-width:600px) { .detail-leisure-row .detail-leisure-card { flex-basis: calc((100vw - 32px)/4); width: calc((100vw - 32px)/4); } }
+
+/* Lazer: duas linhas fixas; o cadastro determina quantas colunas são necessárias. */
+.detail-leisure-scroll { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); }
+.detail-leisure-scroll::-webkit-scrollbar { height: 5px; }
+.detail-leisure-scroll::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }
+.detail-leisure-scroll::-webkit-scrollbar-thumb { background: var(--primitive-color-coral-300); border-radius: 999px; }
+.detail-leisure-grid { display: grid; width: max-content; min-width: 100%; grid-template-columns: repeat(var(--leisure-columns),minmax(0,125px)); grid-template-rows: repeat(2,125px); grid-auto-flow: row; margin-inline: auto; }
+.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-cell { width: 125px; height: 125px; min-width: 0; border: 0; border-radius: 0; padding: 14px 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; background-color: transparent; background-repeat: no-repeat; background-size: 100% 200%; background-position: top center; color: white; }
+.detail-leisure-grid .detail-leisure-card--lower { background-position: bottom center; }
+.detail-leisure-grid .detail-leisure-pattern--left,.detail-leisure-brand-cell.detail-leisure-pattern--left { background-image: url('../images/figma/leisure-patterns/bg-left.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--center-left,.detail-leisure-brand-cell.detail-leisure-pattern--center-left { background-image: url('../images/figma/leisure-patterns/bg-center-left.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--center-right,.detail-leisure-brand-cell.detail-leisure-pattern--center-right { background-image: url('../images/figma/leisure-patterns/bg-center-right.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--right,.detail-leisure-brand-cell.detail-leisure-pattern--right { background-image: url('../images/figma/leisure-patterns/bg-right.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--right2,.detail-leisure-brand-cell.detail-leisure-pattern--right2 { background-image: url('../images/figma/leisure-patterns/bg-right2.svg'); }
+.detail-leisure-grid .detail-leisure-card img { transform: scaleY(-1); }
+.detail-leisure-grid .detail-leisure-card p { max-width: 12ch; margin: 0; text-align: center; line-height: 1.4; }
+.detail-leisure-brand-cell { background-position: top center; }
+.detail-leisure-brand-cell img { width: 52px; height: auto; }
+@media(max-width:600px) { .detail-leisure-grid { grid-template-columns: repeat(var(--leisure-columns),minmax(0,calc((100vw - 32px)/2))); grid-template-rows: repeat(2,calc((100vw - 32px)/2)); }.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-cell { width: calc((100vw - 32px)/2); height: calc((100vw - 32px)/2); } }
+
+.detail-leisure-brand-cell.detail-leisure-pattern--right2 { background-position: bottom center; }
+
+/* Lazer: um card em cada coluna, todos em uma única faixa horizontal. */
+.detail-leisure-scroll { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); }
+.detail-leisure-scroll::-webkit-scrollbar { height: 5px; }
+.detail-leisure-scroll::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }
+.detail-leisure-scroll::-webkit-scrollbar-thumb { background: var(--primitive-color-coral-300); border-radius: 999px; }
+.detail-leisure-track { display: flex; flex-flow: row nowrap; width: max-content; min-width: max-content; }
+.detail-leisure-track .detail-leisure-card,.detail-leisure-brand-single { flex: 0 0 clamp(88px,12vw,150px); width: clamp(88px,12vw,150px); height: clamp(88px,12vw,150px); aspect-ratio: 1; border: 0; border-radius: 0; padding: 14px 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; background-color: transparent; background-repeat: no-repeat; background-size: 100% 200%; background-position: top center; color: white; }
+.detail-leisure-track .detail-leisure-pattern--left,.detail-leisure-brand-single.detail-leisure-pattern--left { background-image: url('../images/figma/leisure-patterns/bg-left.svg'); }
+.detail-leisure-track .detail-leisure-pattern--center-left,.detail-leisure-brand-single.detail-leisure-pattern--center-left { background-image: url('../images/figma/leisure-patterns/bg-center-left.svg'); }
+.detail-leisure-track .detail-leisure-pattern--center-right,.detail-leisure-brand-single.detail-leisure-pattern--center-right { background-image: url('../images/figma/leisure-patterns/bg-center-right.svg'); }
+.detail-leisure-track .detail-leisure-pattern--right,.detail-leisure-brand-single.detail-leisure-pattern--right { background-image: url('../images/figma/leisure-patterns/bg-right.svg'); }
+.detail-leisure-track .detail-leisure-pattern--right2,.detail-leisure-brand-single.detail-leisure-pattern--right2 { background-image: url('../images/figma/leisure-patterns/bg-right2.svg'); }
+.detail-leisure-track .detail-leisure-card img { transform: scaleY(-1); }
+.detail-leisure-track .detail-leisure-card p { max-width: 12ch; margin: 0; text-align: center; line-height: 1.4; font-size: clamp(10px,1vw,13px); }
+.detail-leisure-brand-single { background-position: bottom center; }
+.detail-leisure-brand-single img { width: 52px; height: auto; }
+@media(max-width:600px) { .detail-leisure-track .detail-leisure-card,.detail-leisure-brand-single { flex-basis: calc((100vw - 32px)/4); width: calc((100vw - 32px)/4); height: calc((100vw - 32px)/4); } }
+
+/* Composição final de lazer: duas linhas, uma coluna para cada posição. */
+.detail-leisure-scroll { width: 100%; overflow-x: auto; overflow-y: hidden; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); }
+.detail-leisure-scroll::-webkit-scrollbar { height: 5px; }
+.detail-leisure-scroll::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }
+.detail-leisure-scroll::-webkit-scrollbar-thumb { background: var(--primitive-color-coral-300); border-radius: 999px; }
+.detail-leisure-grid { display: grid; width: max-content; min-width: 100%; grid-template-columns: repeat(var(--leisure-columns),125px); grid-template-rows: repeat(2,125px); grid-auto-flow: row; margin-inline: 0; }
+.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 125px; height: 125px; min-width: 0; border: 0; border-radius: 0; padding: 14px 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; background-color: transparent; background-repeat: no-repeat; background-size: 100% 200%; background-position: top center; color: white; }
+.detail-leisure-grid .detail-leisure-card--lower { background-position: bottom center; }
+.detail-leisure-grid .detail-leisure-pattern--left,.detail-leisure-brand-single.detail-leisure-pattern--left { background-image: url('../images/figma/leisure-patterns/bg-left.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--center-left,.detail-leisure-brand-single.detail-leisure-pattern--center-left { background-image: url('../images/figma/leisure-patterns/bg-center-left.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--center-right,.detail-leisure-brand-single.detail-leisure-pattern--center-right { background-image: url('../images/figma/leisure-patterns/bg-center-right.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--right,.detail-leisure-brand-single.detail-leisure-pattern--right { background-image: url('../images/figma/leisure-patterns/bg-right.svg'); }
+.detail-leisure-grid .detail-leisure-pattern--right2,.detail-leisure-brand-single.detail-leisure-pattern--right2 { background-image: url('../images/figma/leisure-patterns/bg-right2.svg'); }
+.detail-leisure-grid .detail-leisure-card img { transform: scaleY(-1); }
+.detail-leisure-grid .detail-leisure-card p,.detail-leisure-brand-single span { max-width: 12ch; margin: 0; text-align: center; line-height: 1.4; font-size: 12px; }
+.detail-leisure-brand-single { background-position: top center; }
+.detail-leisure-brand-single.detail-leisure-pattern--right2 { background-position: bottom center; }
+.detail-leisure-brand-single img { width: 42px; height: auto; }
+@media(max-width:600px) { .detail-leisure-grid { grid-template-columns: repeat(var(--leisure-columns),calc((100vw - 32px)/2)); grid-template-rows: repeat(2,calc((100vw - 32px)/2)); }.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: calc((100vw - 32px)/2); height: calc((100vw - 32px)/2); } }
+
+@media(max-width:600px) { .detail-leisure-grid { grid-template-columns: repeat(var(--leisure-columns),calc((100vw - 32px)/2)); } }
+
+/* Encaixe contínuo: sem folga entre os SVGs adjacentes. */
+.detail-leisure-grid { column-gap: 0; row-gap: 0; gap: 0; }
+.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 125px; height: 125px; }
+@media(max-width:600px) { .detail-leisure-grid { grid-template-columns: repeat(var(--leisure-columns),125px); grid-template-rows: repeat(2,125px); }.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 125px; height: 125px; } }
+
+/* Compensa a margem transparente de antialias nas bordas dos SVGs adjacentes. */
+.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 127px; margin-right: -2px; }
+@media(max-width:600px) { .detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 127px; } }
+
+/* Pequena sobreposição das formas vetoriais para eliminar frestas de rasterização. */
+.detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 128px; height: 128px; position: relative; z-index: 0; }
+.detail-leisure-grid .detail-leisure-card.detail-leisure-overlap-left,.detail-leisure-brand-single.detail-leisure-overlap-left { margin-left: -3px; }
+.detail-leisure-grid .detail-leisure-card.detail-leisure-lower,.detail-leisure-brand-single.detail-leisure-lower { margin-top: -3px; }
+@media(max-width:600px) { .detail-leisure-grid .detail-leisure-card,.detail-leisure-brand-single { width: 128px; height: 128px; } }
+
+.detail-leisure-grid .detail-leisure-card.detail-leisure-lower,.detail-leisure-brand-single.detail-leisure-lower { background-position: bottom center; }

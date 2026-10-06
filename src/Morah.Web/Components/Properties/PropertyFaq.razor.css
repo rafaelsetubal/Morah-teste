@@ -1,0 +1,15 @@
+.property-faq-disclaimer { margin: 0 0 var(--primitive-spacing-4); font-size: 12px; line-height: 1.5; color: var(--semantic-color-text-secondary); }
+.property-faq-list { display: flex; flex-direction: column; gap: var(--primitive-spacing-3); }
+.property-faq-item { overflow: clip; border: 1px solid var(--semantic-color-border-default); border-radius: var(--primitive-radius-16); background: var(--semantic-color-surface-default); transition: border-color 160ms ease, background-color 160ms ease, box-shadow 160ms ease; }
+.property-faq-item summary { display: flex; min-height: 58px; padding: var(--primitive-spacing-4); align-items: center; justify-content: space-between; gap: var(--primitive-spacing-4); list-style: none; cursor: pointer; font-family: var(--font-support); font-size: 15px; font-weight: 600; line-height: 21px; color: var(--semantic-color-text-primary); }
+.property-faq-item summary::-webkit-details-marker { display: none; }
+.property-faq-toggle { flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 50%; color: var(--primitive-color-coral-700); background: var(--primitive-color-coral-50); font-family: var(--font-heading); font-size: 21px; line-height: 1; transition: transform 180ms ease, background-color 180ms ease, color 180ms ease; }
+.property-faq-item[open] { border-color: var(--primitive-color-coral-200); box-shadow: 0 2px 8px rgba(38,38,35,.05); }
+.property-faq-item[open] summary { color: var(--primitive-color-coral-700); background: var(--primitive-color-coral-50); }
+.property-faq-item[open] .property-faq-toggle { transform: rotate(45deg); background: var(--primitive-color-coral-500); color: white; }
+.property-faq-answer { padding: var(--primitive-spacing-4); border-top: 1px solid var(--semantic-color-border-default); font-size: 14px; line-height: 1.7; color: var(--semantic-color-text-secondary); }
+.property-faq-answer p { margin: 0; max-width: 78ch; }
+.property-faq-answer a { display: inline-flex; align-items: center; margin-top: var(--primitive-spacing-3); color: var(--primitive-color-coral-700); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.property-faq-item summary:focus-visible,.property-faq-answer a:focus-visible { outline: 3px solid var(--semantic-color-border-focus); outline-offset: -3px; }
+@media(max-width:600px) { .property-faq-item summary { min-height: 56px; padding: var(--primitive-spacing-4); font-size: 14px; }.property-faq-answer { font-size: 13px; } }
+@media(prefers-reduced-motion:reduce) { .property-faq-item,.property-faq-toggle { transition: none; } }

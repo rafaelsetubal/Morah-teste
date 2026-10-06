@@ -1,0 +1,20 @@
+<section id="condicoes-compra" class="detail-section purchase-conditions" aria-labelledby="purchase-conditions-title">
+    <header class="purchase-conditions-heading">
+        <p class="overline">APOIO PARA CONQUISTAR SEU APÊ</p>
+        <h2 id="purchase-conditions-title">Condições de compra</h2>
+        <p>Conte com alternativas e orientação ao longo da sua jornada.</p>
+    </header>
+    <ul class="purchase-condition-grid">
+        @foreach (var item in Items)
+        {
+            <li class="purchase-condition-card">
+                <span class="purchase-condition-icon"><MorahIcon Name="@item.Icon" /></span>
+                <span class="purchase-condition-copy"><strong>@item.Title</strong><span>@item.Description</span></span>
+            </li>
+        }
+    </ul>
+    <p class="purchase-conditions-note">Informações ilustrativas, sujeitas à análise, à disponibilidade e às regras vigentes dos programas e instituições financeiras.</p>
+</section>
+@code {
+    [Parameter] public IReadOnlyList<PurchaseConditionItem> Items { get; set; } = PurchaseConditionExamples.Items;
+}

@@ -7,7 +7,7 @@
         <fieldset class="interest-timing"><legend>Quando pretende comprar?</legend>@foreach (var timing in new[] { "Agora", "3–6 meses", "Só pesquisando" }) { <label><input type="radio" name="prazo" value="@timing" checked="@(timing == "Agora")" /><span>@timing</span></label> }</fieldset>
         <label class="interest-consent"><input type="checkbox" name="consentimento" required /><span>Concordo em receber contato da Morah e li a <a href="/privacidade">Política de Privacidade.</a></span></label>
         <MorahButton Label="Quero falar com um especialista" Size="MorahButtonSize.LG" TrailingIcon="MorahIconName.ArrowForward" ButtonType="MorahButtonType.Submit" />
-        <p class="interest-note">Seus dados estão seguros</p>
+        <p class="interest-note">Usaremos seus dados apenas para retornar sobre seu interesse, conforme nossa <a href="/privacidade">Política de Privacidade</a>.</p>
         <p class="interest-feedback" role="status" hidden>O atendimento por este formulário ainda não está disponível. Nenhum dado foi enviado.</p>
     </form>
 </aside>

@@ -61,7 +61,7 @@
 @media(hover:hover) and (pointer:fine) { .detail-gallery-thumbnails button:hover img { transform: scale(1.035); } }
 @media(prefers-reduced-motion:reduce) { .detail-gallery-thumbnails img { transition: none; }.detail-gallery-thumbnails button:hover img { transform: none; } }
 /* Celular: arraste nativo pelo toque, além do suporte a ponteiro no script. */
-@media(max-width:600px) {
+@media(max-width:1100px) {
     .detail-section-navigation { flex-wrap: nowrap; overflow-x: auto; overflow-y: hidden; gap: 0; scrollbar-width: thin; scrollbar-color: var(--primitive-color-coral-300) var(--primitive-color-coral-50); overscroll-behavior-x: contain; -webkit-overflow-scrolling: touch; touch-action: pan-x pan-y; user-select: none; cursor: grab; }
     .detail-section-navigation::-webkit-scrollbar { height: 5px; }
     .detail-section-navigation::-webkit-scrollbar-track { background: var(--primitive-color-coral-50); border-radius: 999px; }

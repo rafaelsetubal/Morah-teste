@@ -1,4 +1,29 @@
 <section id="lazer" class="detail-section" aria-label="Lazer completo">
     <PropertySectionHeading Eyebrow="LAZER COMPLETO" Title="Mais motivos para aproveitar cada dia" Description="Espaços para brincar, celebrar, relaxar e criar novas memórias sem sair de casa." />
-    <div class="detail-leisure-scroll" tabindex="0" aria-label="Itens de lazer, deslize para ver todos"><div class="detail-leisure-grid">@for(var i = 0; i < 12; i++) { <LeisureCard Coral="@((i / 6 + i % 6) % 2 != 0)" /> }</div></div>
+    <div class="detail-leisure-scroll" tabindex="0" aria-label="Itens de lazer, deslize horizontalmente para ver todos" data-drag-scroll>
+        <div class="detail-leisure-grid" style="--leisure-columns:@ColumnCount">
+            @for(var i = 0; i < ColumnCount * 2; i++)
+            {
+                var pattern = PatternForColumn(i % ColumnCount);
+                var overlapClass = i % ColumnCount > 0 ? "detail-leisure-overlap-left" : "";
+                if (i < Items.Count) { <LeisureCard Label="@Items[i]" PatternClass="@pattern" IsLowerRow="@(i >= ColumnCount)" OverlapLeft="@(i % ColumnCount > 0)" /> }
+                else { <div class="detail-leisure-brand-single @pattern @overlapClass @(i >= ColumnCount ? "detail-leisure-lower" : "")"><BrandLogo Layout="BrandLogoLayout.Icon" Color="BrandLogoColor.White" Alt="Morah" /><span>Morah</span></div> }
+            }
+        </div>
+    </div>
 </section>
+@code {
+    [Parameter] public IReadOnlyList<string> Items { get; set; } = DefaultItems;
+    private int ColumnCount => Math.Max(2, (Items.Count + 1) / 2);
+    private static readonly string[] DefaultItems = Enumerable.Repeat("Label em até 2 linhas", 12).ToArray();
+    private string PatternForColumn(int column)
+    {
+        var count = ColumnCount;
+        if (count == 2) return column == 0 ? "detail-leisure-pattern--left" : "detail-leisure-pattern--right";
+        if (count == 3) return column switch { 0 => "detail-leisure-pattern--left", 1 => "detail-leisure-pattern--center-left", _ => "detail-leisure-pattern--right2" };
+        if (column == 0) return "detail-leisure-pattern--left";
+        if (column == count - 1) return count % 2 == 1 ? "detail-leisure-pattern--right2" : "detail-leisure-pattern--right";
+        return (column % 2 == 1 ? "detail-leisure-pattern--center-left" : "detail-leisure-pattern--center-right");
+    }
+}
+

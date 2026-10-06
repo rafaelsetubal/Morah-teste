@@ -2,9 +2,8 @@
     <div class="catalog-filter-heading"><h2><MorahIcon Name="MorahIconName.FilterList" />Filtros</h2><a href="/empreendimentos">Limpar filtros</a></div>
     <ResponsiveFilterPanel><div class="catalog-filter-groups">
     <fieldset><legend>Status da obra</legend>@foreach (var option in StatusOptions) { <label><input type="checkbox" name="status" value="@option.Value" checked="@Statuses.Contains(option.Value)" /><span>@option.Label</span><small>@CatalogProperties.Items.Count(x => x.StatusKey == option.Value)</small></label> }</fieldset>
-    <fieldset disabled title="Preços não informados nos cards demonstrativos"><legend>Faixa de preço</legend><div class="catalog-range" aria-hidden="true"><i></i><i></i></div><small>R$ 150 mil — R$ 500 mil</small></fieldset>
     <fieldset><legend>Quartos</legend>@foreach (var room in new[] { "1", "2", "3", "4" }) { <label><input type="checkbox" name="quartos" value="@room" checked="@Rooms.Contains(room)" /><span>@(room == "4" ? "4+ quartos" : room == "1" ? "1 quarto" : $"{room} quartos")</span><small>@CatalogProperties.Items.Count(x => x.HasRoom(room))</small></label> }</fieldset>
-    <fieldset disabled title="Faixa de área ilustrativa do Figma"><legend>Área</legend><div class="catalog-range" aria-hidden="true"><i></i><i></i></div><small>30 m² — 100 m²</small></fieldset>
+    <fieldset class="catalog-area-filter"><legend>Área (m²)</legend><div class="catalog-area-inputs"><label><span>Mínima</span><input type="number" name="areaMin" min="0" max="200" step="1" value="@AreaMin" placeholder="30" aria-label="Área mínima em metros quadrados" /></label><span aria-hidden="true">até</span><label><span>Máxima</span><input type="number" name="areaMax" min="0" max="200" step="1" value="@AreaMax" placeholder="100" aria-label="Área máxima em metros quadrados" /></label></div></fieldset>
     <fieldset><legend>Tipo de imóvel</legend><label><input type="checkbox" name="tipo" value="apartamento" checked="@Types.Contains("apartamento")" /><span>Apartamento</span><small>@CatalogProperties.Items.Count(x => x.Type == "apartamento")</small></label><label><input type="checkbox" name="tipo" value="casa" checked="@Types.Contains("casa")" /><span>Casa</span><small>@CatalogProperties.Items.Count(x => x.Type == "casa")</small></label></fieldset>
     <fieldset><legend>Lazer e diferenciais</legend>@foreach(var option in CatalogProperties.AmenityOptions) { <label><input type="checkbox" name="lazer" value="@option.Value" checked="@Amenities.Contains(option.Value)" /><span>@option.Label</span><small>@CatalogProperties.Items.Count(x => x.Amenities.Contains(option.Value))</small></label> }</fieldset>
     </div>
@@ -16,6 +15,8 @@
     [Parameter] public string[] Rooms { get; set; } = [];
     [Parameter] public string[] Types { get; set; } = [];
     [Parameter] public string[] Amenities { get; set; } = [];
+    [Parameter] public int? AreaMin { get; set; }
+    [Parameter] public int? AreaMax { get; set; }
     private static readonly SearchOption[] StatusOptions = [new("prelancamento", "Pré-lançamento"), new("lancamento", "Lançamento"), new("construcao", "Em construção"), new("avancadas", "Obras avançadas"), new("pronto", "Pronto para morar")];
 }
 

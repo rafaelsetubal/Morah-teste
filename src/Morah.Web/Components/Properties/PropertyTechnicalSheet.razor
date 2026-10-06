@@ -1,0 +1,19 @@
+<section id="ficha-tecnica" class="detail-section" aria-label="Ficha técnica do empreendimento">
+    <PropertySectionHeading Eyebrow="FICHA TÉCNICA" Title="Conheça os detalhes do empreendimento" />
+    <div class="technical-sheet-grid">
+        @foreach (var group in Groups)
+        {
+            <dl class="technical-sheet-table">
+                @foreach (var item in group)
+                {
+                    <div class="technical-sheet-row"><dt>@item.Label</dt><dd>@if (item.Section is not null) { <a href="@($"{RoutePath}#{item.Section}")">@item.Value</a> } else { @item.Value }</dd></div>
+                }
+            </dl>
+        }
+    </div>
+    <p class="technical-sheet-note">Informações demonstrativas para visualização do modelo.</p>
+</section>
+@code {
+    [Parameter] public IReadOnlyList<IReadOnlyList<TechnicalSheetItem>> Groups { get; set; } = TechnicalSheetExample.Groups;
+    [Parameter] public string RoutePath { get; set; } = "/empreendimentos/vista-do-parque";
+}
